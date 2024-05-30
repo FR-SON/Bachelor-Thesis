@@ -1,0 +1,35 @@
+\section*{Appendix}\label{sec:apx}
+
+\csvstyle{Activities}{
+tabular = |c|l|,
+table head = \hline \textbf{Case ID} & \textbf{Activity}\\\hline\hline,
+late after line = \\\hline,
+head to column names,
+}
+\csvstyle{SingleColumn}{
+tabular = |l|,
+table head = \hline \textbf{#1} \\\hline\hline,
+late after line = \\\hline,
+head to column names,
+}
+\begin{table}[h]
+    \tiny
+    \captionsetup{justification=raggedright,singlelinecheck=false}
+    \csvreader[Activities]{bachelor_thesis/data/journey_comparison_1_ground_truth.csv}{}{%
+        1 & \activity
+    }
+    \caption{Ground truth for patient journey \#1}
+    \label{tab:pj1-gt}
+\end{table}
+\begin{table}[h]
+    \tiny
+    \captionsetup{justification=raggedright,singlelinecheck=false}
+    \csvreader[SingleColumn={Missing Activities}]{bachelor_thesis/data/journey_comparison_1-2_issues.csv}{
+    Missing Activities=\missing
+    }{%
+        \missing
+    }
+    \caption{Missing activites \#2}
+    \label{tab:pj1-gt}
+\end{table}
+

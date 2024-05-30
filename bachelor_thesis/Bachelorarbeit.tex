@@ -21,7 +21,11 @@
 \usepackage{textcomp}
 \usepackage{amsmath,amssymb}
 \usepackage{hyperref}
+\usepackage{xcolor}
 \usepackage{listings}
+\usepackage[l3]{csvsimple}
+\usepackage{caption}
+
 
 
 % additional settings
@@ -35,6 +39,32 @@
 	citecolor=black,        % color of links to bibliography
 	filecolor=black,        % color of file links
 	urlcolor=black          % color of external links
+}
+% style settings for json code
+\colorlet{punct}{red!60!black}
+\definecolor{background}{HTML}{e7e8ea}
+\definecolor{delim}{RGB}{20,105,176}
+\definecolor{json-key}{HTML}{29563a}
+\lstdefinelanguage{json}{
+    basicstyle=\small\ttfamily,
+    % numbers=left,
+    % numberstyle=\scriptsize,
+    % stepnumber=1,
+    % numbersep=8pt,
+    showstringspaces=false,
+    breaklines=true,
+    frame=single,
+    backgroundcolor=\color{background},
+    morekeywords={role,content},
+    keywordstyle=\color{json-key},
+    literate=
+      {":}{{"{\color{punct}{:}}}}{2}
+      {",}{{"{\color{punct}{,}}}}{2}
+      {\},}{{\}{\color{punct}{,}}}}{2}
+      {\{}{{{\color{delim}{\{}}}}{1}
+      {\}}{{{\color{delim}{\}}}}}{1}
+      {[}{{{\color{delim}{[}}}}{1}
+      {]}{{{\color{delim}{]}}}}{1},
 }
 
 % stretch text vertically by factor (zeilenabstand)
@@ -84,7 +114,7 @@
 	\selectlanguage{english}
 
 	% special pages	
-	\include{titlepage}
+	\include{bachelor_thesis/titlepage}
 	\cleardoublepage
 	\include{bachelor_thesis/preface/erklaerung}
 	\cleardoublepage
@@ -106,8 +136,7 @@
     \include{bachelor_thesis/chapters/fine-tuning}
     \include{bachelor_thesis/chapters/evaluation}
 	\include{bachelor_thesis/chapters/conclusion}
-
-
+    \include{bachelor_thesis/chapters/appendix}
 
 	% bibliography
 	\cleardoublepage

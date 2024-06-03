@@ -25,6 +25,7 @@
 \usepackage{listings}
 \usepackage[l3]{csvsimple}
 \usepackage{caption}
+\usepackage{subfigure}
 
 
 
@@ -105,6 +106,7 @@
 \def\subsubsectionautorefname{Abschnitt}
 \def\figureautorefname{Abbildung}
 \def\lstlistingautorefname{Listing}
+\renewcommand{\appendixautorefname}{A}
 
 % my new commands
 \newcommand{\quotes}[1]{``#1''}
@@ -126,6 +128,7 @@
 	\pagenumbering{Roman}
 	\tableofcontents
 	\listoffigures
+    \lstlistoflistings
 	\cleardoublepage
 	
 	% include your chapters

@@ -1,0 +1,19 @@
+,case:concept:name,activity,time:timestamp,time:end_timestamp,time:duration,event_type,attribute_location,activity_relevance,timestamp_correctness,correctness_confidence,end_timestamp_correctness
+0,47,starting to experience symptoms,2021-06-15,2021-06-18,3 days,Symptom Onset,Doctors,High Relevance,True,0.93,False
+1,47,self-isolating at home,2021-06-15,2021-06-18,3 days,Lifestyle Change,Home,High Relevance,True,0.95,False
+2,47,contacting primary care physician,2021-06-16,2021-06-16,0 days,Doctor Visit,Doctors,High Relevance,True,0.98,True
+4,47,"following healthcare guidelines, taking medication, staying hydrated",2021-06-16,2021-06-18,2 days,Lifestyle Change,Home,High Relevance,True,0.99,True
+3,47,"symptoms progressing: high fever, cough, fatigue",2021-06-18,2021-06-21,3 days,Symptom Onset,Doctors,High Relevance,True,0.98,True
+5,47,continuing to stay isolated at home,2021-06-18,2021-06-21,3 days,Lifestyle Change,Home,Moderate Relevance,True,0.96,False
+6,47,seeking telemedicine consultation with infectious disease specialist,2021-06-18,2021-06-21,3 days,Doctors Visit,Doctors,High Relevance,True,0.86,False
+7,47,receiving advice on symptom management and oxygen monitoring,2021-06-18,2021-06-21,3 days,Treatment,Doctors,High Relevance,True,0.91,True
+9,47,continuing self-isolation,2021-06-21,2021-07-05,14 days,Lifestyle Change,Home,Moderate Relevance,True,0.94,True
+8,47,symptoms gradually improving,2021-06-21,2021-07-05,14 days,Symptom Offset,Home,Moderate Relevance,True,0.97,True
+10,47,resuming normal activities after two weeks,2021-07-05,2021-07-19,14 days,Symptom Offset,Home,Low Relevance,False,0.94,False
+11,47,deciding to get vaccinated after recovery,2021-07-05,2021-09-01,58 days,Lifestyle Change,Doctors,Low Relevance,False,0.51,False
+12,47,receiving first dose of vaccine,2021-09-01,2021-09-03,2 days,Treatment,Doctors,High Relevance,True,0.62,False
+13,47,experiencing mild side effects,2021-09-01,2021-09-03,2 days,Symptom Offset,Doctors,Low Relevance,True,0.89,True
+14,47,receiving second dose of vaccine,2021-10-01,2021-10-15,14 days,Treatment,Doctors,High Relevance,True,0.67,False
+15,47,following up with primary care physician for immune response check,2021-10-01,2021-10-01,0 days,Doctor Visit,Doctors,High Relevance,True,0.99,True
+16,47,receiving reassurance on vaccine effectiveness,2021-10-01,2021-10-01,0 days,Feelings,Doctors,Moderate Relevance,True,0.99,True
+17,47,highlighting importance of public health guidelines and precautions,2021-10-01,2021-10-01,0 days,Lifestyle Change,Doctors,High Relevance,True,0.98

@@ -1,0 +1,9 @@
+,case:concept:name,activity,time:timestamp,time:end_timestamp,time:duration,event_type,attribute_location,activity_relevance,timestamp_correctness,correctness_confidence,end_timestamp_correctness
+0,54,"wearing masks, immune system weakened",2021-01-01,2021-01-01,0 days,Lifestyle Change,Doctors,Moderate Relevance,True,0.96,True
+1,54,experiencing stronger cold symptoms,2021-01-01,2021-01-03,2 days,Symptom Onset,Doctors,Moderate Relevance,True,0.69,True
+2,54,developing cough and fever,2021-01-01,2021-01-05,4 days,Symptom Onset,Doctors,High Relevance,True,0.71,True
+3,54,testing positive for Covid-19,2021-04-01,2021-04-08,7 days,Diagnosis,Doctors,High Relevance,False,0.67,True
+4,54,quarantining and getting negative PCR test,2021-04-08,2021-04-15,7 days,Symptom Offset,Home,Moderate Relevance,True,0.58,False
+5,54,receiving first dose of vaccine,2021-10-01,2021-10-08,7 days,Treatment,Doctors,High Relevance,True,0.51,False
+6,54,receiving second dose of vaccine,2021-11-12,2021-12-24,42 days,Treatment,Doctors,High Relevance,True,0.98,False
+7,54,receiving third dose of vaccine,2022-03-01,2022-04-12,42 days,Treatment,Doctors,High Relevance,False,0.80,True

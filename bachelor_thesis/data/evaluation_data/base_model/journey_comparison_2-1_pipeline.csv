@@ -1,0 +1,17 @@
+,case:concept:name,activity,time:timestamp,time:end_timestamp,time:duration,event_type,attribute_location,activity_relevance,timestamp_correctness,correctness_confidence,eval_event_type,end_timestamp_correctness
+0,43,starting to experience symptoms,2021-06-15,2021-06-19,4 days,Symptom Onset,Doctors,High Relevance,True,0.60,t,False
+1,43,self-isolating at home,2021-06-15,2021-06-20,5 days,Lifestyle Change,Home,High Relevance,True,0.83,t,False
+2,43,contacting primary care physician,2021-06-16,2021-06-19,3 days,Doctor Visit,Doctors,High Relevance,True,0.74,t,False
+3,43,symptoms progressing,2021-06-16,2021-06-19,3 days,Symptom Onset,Doctors,High Relevance,True,0.67,t,True
+4,43,following healthcare guidelines,2021-06-16,2021-06-22,6 days,Lifestyle Change,Home,High Relevance,True,0.90,t,True
+5,43,continuing to stay isolated,2021-06-16,2021-06-22,6 days,Lifestyle Change,Home,Moderate Relevance,True,0.96,t,False
+7,43,continuing to self-isolate,2021-06-16,2021-06-30,14 days,Lifestyle Change,Home,Moderate Relevance,True,0.69,t,False
+6,43,symptoms improving,2021-06-22,2021-06-29,7 days,Symptom Offset,Home,High Relevance,True,0.97,t,True
+8,43,resuming normal activities after isolation,2021-06-29,2021-07-13,14 days,Lifestyle Change,Home,Low Relevance,False,0.78,t,False
+9,43,deciding to get vaccinated,2021-06-29,2021-09-01,64 days,Lifestyle Change,Doctors,High Relevance,True,0.75,t,False
+10,43,receiving first dose of vaccine,2021-09-01,2021-09-02,1 days,Treatment,Doctors,High Relevance,True,0.75,t,False
+11,43,experiencing mild side effects,2021-09-01,2021-09-03,2 days,Symptom Offset,Doctors,Low Relevance,True,0.89,f,True
+13,43,following up with primary care physician,2021-09-01,2021-10-01,30 days,Doctor Visit,Doctors,High Relevance,False,0.60,t,False
+12,43,receiving second dose of vaccine,2021-10-01,2021-10-15,14 days,Treatment,Doctors,High Relevance,True,0.55,t,False
+14,43,receiving reassurance about vaccine effectiveness,2021-10-01,2021-10-01,0 days,Feelings,Doctors,Low Relevance,True,0.99,f,True
+15,43,highlighting importance of public health guidelines,2021-10-01,2021-10-01,0 days,Lifestyle Change,Home,High Relevance,True,0.98,,True

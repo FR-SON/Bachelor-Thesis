@@ -1,0 +1,306 @@
+journey_id,run_id,activity,event_type_ground_truth,event_type,eval_event_type
+1,1,experiencing first covid 19 symptoms,Symptom Onset,Symptom Onset,True
+1,1,isolating myself,Lifestyle Change,Lifestyle Change,True
+1,1,informing family,Lifestyle Change,Lifestyle Change,True
+1,1,focusing on resting while isolated,Treatment,Lifestyle Change,False
+1,1,experiencing worse symptoms,Symptom Onset,Symptom Onset,True
+1,1,consulting family physician,Doctor Visit,Doctors Visit,False
+1,1,testing positive for covid 19,Diagnosis,Diagnosis,True
+1,1,experiencing slow recovery,Symptom Offset,Symptom Offset,True
+1,1,returning to work with precautions,Lifestyle Change,Lifestyle Change,True
+1,1,getting vaccinated after consultation with doctor,Treatment,Treatment,True
+1,1,experiencing mild side effects from vaccine,Symptom Onset,Symptom Onset,True
+1,1,getting the second vaccination,Treatment,Treatment,True
+1,1,feeling a sense of relief,Feelings,Feelings,True
+1,2,experiencing first covid 19 symptoms,Symptom Onset,Symptom Onset,True
+1,2,isolating myself,Lifestyle Change,Lifestyle Change,True
+1,2,informing family,Lifestyle Change,Lifestyle Change,True
+1,2,focusing on resting while isolated,Treatment,Lifestyle Change,False
+1,2,experiencing worse symptoms,Symptom Onset,Symptom Onset,True
+1,2,consulting family physician,Doctor Visit,Doctors Visit,False
+1,2,testing positive for covid 19,Diagnosis,Diagnosis,True
+1,2,experiencing slow recovery,Symptom Offset,Symptom Offset,True
+1,2,returning to work with precautions,Lifestyle Change,Lifestyle Change,True
+1,2,getting vaccinated after consultation with doctor,Treatment,Treatment,True
+1,2,experiencing mild side effects from vaccine,Symptom Onset,Symptom Onset,True
+1,2,getting the second vaccination,Treatment,Treatment,True
+1,2,feeling a sense of relief,Feelings,Feelings,True
+1,3,experiencing first covid 19 symptoms,Symptom Onset,Symptom Onset,True
+1,3,isolating myself,Lifestyle Change,Lifestyle Change,True
+1,3,informing family,Lifestyle Change,Lifestyle Change,True
+1,3,focusing on resting while isolated,Treatment,Lifestyle Change,False
+1,3,experiencing worse symptoms,Symptom Onset,Symptom Onset,True
+1,3,consulting family physician,Doctor Visit,Doctors Visit,False
+1,3,testing positive for covid 19,Diagnosis,Diagnosis,True
+1,3,experiencing slow recovery,Symptom Offset,Symptom Offset,True
+1,3,returning to work with precautions,Lifestyle Change,Lifestyle Change,True
+1,3,getting vaccinated after consultation with doctor,Treatment,Treatment,True
+1,3,experiencing mild side effects from vaccine,Symptom Onset,Feelings,False
+1,3,getting the second vaccination,Treatment,Treatment,True
+1,3,feeling a sense of relief,Feelings,Feelings,True
+1,4,experiencing first covid 19 symptoms,Symptom Onset,Symptom Onset,True
+1,4,isolating myself,Lifestyle Change,Lifestyle Change,True
+1,4,informing family,Lifestyle Change,Lifestyle Change,True
+1,4,focusing on resting while isolated,Treatment,Lifestyle Change,False
+1,4,experiencing worse symptoms,Symptom Onset,Symptom Onset,True
+1,4,consulting family physician,Doctor Visit,Doctors Visit,False
+1,4,testing positive for covid 19,Diagnosis,Diagnosis,True
+1,4,experiencing slow recovery,Symptom Offset,Symptom Offset,True
+1,4,returning to work with precautions,Lifestyle Change,Lifestyle Change,True
+1,4,getting vaccinated after consultation with doctor,Treatment,Treatment,True
+1,4,experiencing mild side effects from vaccine,Symptom Onset,Symptom Onset,True
+1,4,getting the second vaccination,Treatment,Treatment,True
+1,4,feeling a sense of relief,Feelings,Feelings,True
+1,5,experiencing first covid 19 symptoms,Symptom Onset,Symptom Onset,True
+1,5,isolating myself,Lifestyle Change,Lifestyle Change,True
+1,5,informing family,Lifestyle Change,Lifestyle Change,True
+1,5,focusing on resting while isolated,Treatment,Lifestyle Change,False
+1,5,experiencing worse symptoms,Symptom Onset,Symptom Onset,True
+1,5,consulting family physician,Doctor Visit,Doctors Visit,False
+1,5,testing positive for covid 19,Diagnosis,Diagnosis,True
+1,5,experiencing slow recovery,Symptom Offset,Symptom Offset,True
+1,5,returning to work with precautions,Lifestyle Change,Lifestyle Change,True
+1,5,getting vaccinated after consultation with doctor,Treatment,Treatment,True
+1,5,experiencing mild side effects from vaccine,Symptom Onset,Symptom Onset,True
+1,5,getting the second vaccination,Treatment,Treatment,True
+1,5,feeling a sense of relief,Feelings,Feelings,True
+2,1,experiencing first covid 19 symptoms,Symptom Onset,Symptom Onset,True
+2,1,self-isolating to protect family,Lifestyle Change,Lifestyle Change,True
+2,1,experiencing progressing symptoms,Symptom Onset,Symptom Onset,True
+2,1,following guidelines from healthcare authorities,Treatment,Lifestyle Change,False
+2,1,taking over-the-counter medication,Medication,Medication,True
+2,1,taking telemedicine consultation,Doctor Visit,Doctors Visit,False
+2,1,experiencing improving symptoms,Symptom Offset,Symptom Offset,True
+2,1,leaving self-isolation and returning to normal activities,Lifestyle Change,Lifestyle Change,True
+2,1,getting first dose of vaccine,Treatment,Treatment,True
+2,1,experiencing mild side effects,System Onset,Feelings,False
+2,1,getting second dose of vaccine,Treatment,Treatment,True
+2,1,getting reassured about effect of vaccine,Doctor Visit,Feelings,False
+2,2,experiencing first covid 19 symptoms,Symptom Onset,Symptom Onset,True
+2,2,self-isolating to protect family,Lifestyle Change,Lifestyle Change,True
+2,2,experiencing progressing symptoms,Symptom Onset,Symptom Onset,True
+2,2,following guidelines from healthcare authorities,Treatment,Lifestyle Change,False
+2,2,taking over-the-counter medication,Medication,Medication,True
+2,2,taking telemedicine consultation,Doctor Visit,Doctor Visit,True
+2,2,experiencing improving symptoms,Symptom Offset,Symptom Offset,True
+2,2,leaving self-isolation and returning to normal activities,Lifestyle Change,Lifestyle Change,True
+2,2,getting first dose of vaccine,Treatment,Treatment,True
+2,2,experiencing mild side effects,System Onset,Feelings,False
+2,2,getting second dose of vaccine,Treatment,Treatment,True
+2,2,getting reassured about effect of vaccine,Doctor Visit,Feelings,False
+2,3,experiencing first covid 19 symptoms,Symptom Onset,Symptom Onset,True
+2,3,self-isolating to protect family,Lifestyle Change,Lifestyle Change,True
+2,3,experiencing progressing symptoms,Symptom Onset,Symptom Onset,True
+2,3,following guidelines from healthcare authorities,Treatment,Lifestyle Change,False
+2,3,taking over-the-counter medication,Medication,Medication,True
+2,3,taking telemedicine consultation,Doctor Visit,Doctors Visit,False
+2,3,experiencing improving symptoms,Symptom Offset,Symptom Offset,True
+2,3,leaving self-isolation and returning to normal activities,Lifestyle Change,Lifestyle Change,True
+2,3,getting first dose of vaccine,Treatment,Treatment,True
+2,3,experiencing mild side effects,System Onset,Feelings,False
+2,3,getting second dose of vaccine,Treatment,Treatment,True
+2,3,getting reassured about effect of vaccine,Doctor Visit,Feelings,False
+2,4,experiencing first covid 19 symptoms,Symptom Onset,Symptom Onset,True
+2,4,self-isolating to protect family,Lifestyle Change,Lifestyle Change,True
+2,4,experiencing progressing symptoms,Symptom Onset,Symptom Onset,True
+2,4,following guidelines from healthcare authorities,Treatment,Lifestyle Change,False
+2,4,taking over-the-counter medication,Medication,Medication,True
+2,4,taking telemedicine consultation,Doctor Visit,Doctors Visit,False
+2,4,experiencing improving symptoms,Symptom Offset,Symptom Offset,True
+2,4,leaving self-isolation and returning to normal activities,Lifestyle Change,Lifestyle Change,True
+2,4,getting first dose of vaccine,Treatment,Treatment,True
+2,4,experiencing mild side effects,System Onset,Symptom Offset,False
+2,4,getting second dose of vaccine,Treatment,Treatment,True
+2,4,getting reassured about effect of vaccine,Doctor Visit,Feelings,False
+2,5,experiencing first covid 19 symptoms,Symptom Onset,Symptom Onset,True
+2,5,self-isolating to protect family,Lifestyle Change,Lifestyle Change,True
+2,5,experiencing progressing symptoms,Symptom Onset,Symptom Onset,True
+2,5,following guidelines from healthcare authorities,Treatment,Lifestyle Change,False
+2,5,taking over-the-counter medication,Medication,Medication,True
+2,5,taking telemedicine consultation,Doctor Visit,Doctors Visit,False
+2,5,experiencing improving symptoms,Symptom Offset,Symptom Offset,True
+2,5,leaving self-isolation and returning to normal activities,Lifestyle Change,Lifestyle Change,True
+2,5,getting first dose of vaccine,Treatment,Treatment,True
+2,5,experiencing mild side effects,System Onset,Feelings,False
+2,5,getting second dose of vaccine,Treatment,Treatment,True
+2,5,getting reassured about effect of vaccine,Doctor Visit,Feelings,False
+3,1,experiencing first covid 19 symptoms,Symptom Onset,Symptom Onset,True
+3,1,self-isolating to protect patients,Lifestyle Change,Lifestyle Change,True
+3,1,experiencing worse symptoms,Symptom Onset,Symptom Onset,True
+3,1,consulting doctor virtually,Doctor Visit,Doctors Visit,False
+3,1,monitoring oxygen levels,Treatment,Treatment,True
+3,1,taking prescribed medication,Medication,Medication,True
+3,1,stabelizing condition,Symptom Offset,Symptom Offset,True
+3,1,focusing on self-care,Lifestyle Change,Lifestyle Change,True
+3,1,relying on virtual support groups for camaraderie,Lifestyle Change,Lifestyle Change,True
+3,1,having difficulties carrying out daily duties,Feelings,Symptom Onset,False
+3,1,getting the first dose of vaccination,Treatment,Treatment,True
+3,1,getting the second dose of vaccination,Treatment,Treatment,True
+3,1,feeling reliefed and protected,Feelings,Feelings,True
+3,1,prioritizing companionship over work,Lifestyle Change,Lifestyle Change,True
+3,2,experiencing first covid 19 symptoms,Symptom Onset,Symptom Onset,True
+3,2,self-isolating to protect patients,Lifestyle Change,Lifestyle Change,True
+3,2,experiencing worse symptoms,Symptom Onset,Symptom Onset,True
+3,2,consulting doctor virtually,Doctor Visit,Doctors Visit,False
+3,2,monitoring oxygen levels,Treatment,Treatment,True
+3,2,taking prescribed medication,Medication,Medication,True
+3,2,stabelizing condition,Symptom Offset,Symptom Offset,True
+3,2,focusing on self-care,Lifestyle Change,Lifestyle Change,True
+3,2,relying on virtual support groups for camaraderie,Lifestyle Change,Lifestyle Change,True
+3,2,having difficulties carrying out daily duties,Feelings,Symptom Onset,False
+3,2,getting the first dose of vaccination,Treatment,Treatment,True
+3,2,getting the second dose of vaccination,Treatment,Treatment,True
+3,2,feeling reliefed and protected,Feelings,Feelings,True
+3,2,prioritizing companionship over work,Lifestyle Change,Lifestyle Change,True
+3,3,experiencing first covid 19 symptoms,Symptom Onset,Symptom Onset,True
+3,3,self-isolating to protect patients,Lifestyle Change,Lifestyle Change,True
+3,3,experiencing worse symptoms,Symptom Onset,Symptom Onset,True
+3,3,consulting doctor virtually,Doctor Visit,Doctors Visit,False
+3,3,monitoring oxygen levels,Treatment,Treatment,True
+3,3,taking prescribed medication,Medication,Medication,True
+3,3,stabelizing condition,Symptom Offset,Symptom Offset,True
+3,3,focusing on self-care,Lifestyle Change,Lifestyle Change,True
+3,3,relying on virtual support groups for camaraderie,Lifestyle Change,Lifestyle Change,True
+3,3,having difficulties carrying out daily duties,Feelings,Symptom Onset,False
+3,3,getting the first dose of vaccination,Treatment,Treatment,True
+3,3,getting the second dose of vaccination,Treatment,Treatment,True
+3,3,feeling reliefed and protected,Feelings,Feelings,True
+3,3,prioritizing companionship over work,Lifestyle Change,Lifestyle Change,True
+3,4,experiencing first covid 19 symptoms,Symptom Onset,Symptom Onset,True
+3,4,self-isolating to protect patients,Lifestyle Change,Lifestyle Change,True
+3,4,experiencing worse symptoms,Symptom Onset,Symptom Onset,True
+3,4,consulting doctor virtually,Doctor Visit,Doctors Visit,False
+3,4,monitoring oxygen levels,Treatment,Treatment,True
+3,4,taking prescribed medication,Medication,Medication,True
+3,4,stabelizing condition,Symptom Offset,Symptom Offset,True
+3,4,focusing on self-care,Lifestyle Change,Lifestyle Change,True
+3,4,relying on virtual support groups for camaraderie,Lifestyle Change,Lifestyle Change,True
+3,4,having difficulties carrying out daily duties,Feelings,Symptom Onset,False
+3,4,getting the first dose of vaccination,Treatment,Treatment,True
+3,4,getting the second dose of vaccination,Treatment,Treatment,True
+3,4,feeling reliefed and protected,Feelings,Feelings,True
+3,4,prioritizing companionship over work,Lifestyle Change,Lifestyle Change,True
+3,5,experiencing first covid 19 symptoms,Symptom Onset,Symptom Onset,True
+3,5,self-isolating to protect patients,Lifestyle Change,Lifestyle Change,True
+3,5,experiencing worse symptoms,Symptom Onset,Symptom Onset,True
+3,5,consulting doctor virtually,Doctor Visit,Doctors Visit,False
+3,5,monitoring oxygen levels,Treatment,Treatment,True
+3,5,taking prescribed medication,Medication,Medication,True
+3,5,stabelizing condition,Symptom Offset,Treatment,False
+3,5,focusing on self-care,Lifestyle Change,Lifestyle Change,True
+3,5,relying on virtual support groups for camaraderie,Lifestyle Change,Lifestyle Change,True
+3,5,having difficulties carrying out daily duties,Feelings,Symptom Offset,False
+3,5,getting the first dose of vaccination,Treatment,Treatment,True
+3,5,getting the second dose of vaccination,Treatment,Treatment,True
+3,5,feeling reliefed and protected,Feelings,Feelings,True
+3,5,prioritizing companionship over work,Lifestyle Change,Lifestyle Change,True
+4,1,deterioration of the immune system due to masks,Symptom Onset,This activity label does not fit into any of the predefined event types.,False
+4,1,starting to cough,Symptom Onset,Symptom Onset,True
+4,1,refusing to test,Lifestyle Change,Lifestyle Change,True
+4,1,getting a fever on top,Symptom Onset,Symptom Onset,True
+4,1,testing positive for covid19,Diagnosis,Diagnosis,True
+4,1,quarantining myself,Lifestyle Change,Lifestyle Change,True
+4,1,testing negative for covid19,Diagnosis,Diagnosis,True
+4,1,getting first dose of vaccine,Treatment,Treatment,True
+4,1,getting second dose of vaccine,Treatment,Treatment,True
+4,1,getting third dose of vaccine,Treatment,Treatment,True
+4,2,deterioration of the immune system due to masks,Symptom Onset,This activity label does not fit into any of the predefined event types.,False
+4,2,starting to cough,Symptom Onset,Symptom Onset,True
+4,2,refusing to test,Lifestyle Change,Lifestyle Change,True
+4,2,getting a fever on top,Symptom Onset,Symptom Onset,True
+4,2,testing positive for covid19,Diagnosis,Diagnosis,True
+4,2,quarantining myself,Lifestyle Change,Lifestyle Change,True
+4,2,testing negative for covid19,Diagnosis,Diagnosis,True
+4,2,getting first dose of vaccine,Treatment,Treatment,True
+4,2,getting second dose of vaccine,Treatment,Treatment,True
+4,2,getting third dose of vaccine,Treatment,Treatment,True
+4,3,deterioration of the immune system due to masks,Symptom Onset,Feelings,False
+4,3,starting to cough,Symptom Onset,Symptom Onset,True
+4,3,refusing to test,Lifestyle Change,Lifestyle Change,True
+4,3,getting a fever on top,Symptom Onset,Symptom Onset,True
+4,3,testing positive for covid19,Diagnosis,Diagnosis,True
+4,3,quarantining myself,Lifestyle Change,Lifestyle Change,True
+4,3,testing negative for covid19,Diagnosis,Diagnosis,True
+4,3,getting first dose of vaccine,Treatment,Treatment,True
+4,3,getting second dose of vaccine,Treatment,Treatment,True
+4,3,getting third dose of vaccine,Treatment,Treatment,True
+4,4,deterioration of the immune system due to masks,Symptom Onset,Feelings,False
+4,4,starting to cough,Symptom Onset,Symptom Onset,True
+4,4,refusing to test,Lifestyle Change,Lifestyle Change,True
+4,4,getting a fever on top,Symptom Onset,Symptom Onset,True
+4,4,testing positive for covid19,Diagnosis,Diagnosis,True
+4,4,quarantining myself,Lifestyle Change,Lifestyle Change,True
+4,4,testing negative for covid19,Diagnosis,Diagnosis,True
+4,4,getting first dose of vaccine,Treatment,Treatment,True
+4,4,getting second dose of vaccine,Treatment,Treatment,True
+4,4,getting third dose of vaccine,Treatment,Treatment,True
+4,5,deterioration of the immune system due to masks,Symptom Onset,Feelings,False
+4,5,starting to cough,Symptom Onset,Symptom Onset,True
+4,5,refusing to test,Lifestyle Change,Lifestyle Change,True
+4,5,getting a fever on top,Symptom Onset,Symptom Onset,True
+4,5,testing positive for covid19,Diagnosis,Diagnosis,True
+4,5,quarantining myself,Lifestyle Change,Lifestyle Change,True
+4,5,testing negative for covid19,Diagnosis,Diagnosis,True
+4,5,getting first dose of vaccine,Treatment,Treatment,True
+4,5,getting second dose of vaccine,Treatment,Treatment,True
+4,5,getting third dose of vaccine,Treatment,Treatment,True
+5,1,feeling weak and trouble breathing,Symptom Onset,Symptom Onset,True
+5,1,symptoms worsening quickly,Symptom Onset,Symptom Onset,True
+5,1,Symptoms identified as Covid-19,Diagnosis,Diagnosis,True
+5,1,Stress piling up,Feelings,Feelings,True
+5,1,contacting physician,Doctor Visit,Doctor Visit,True
+5,1,"bedridden:difficulty breathing, headache, conjunctivitis and more",Symptom Onset,Symptom Onset,True
+5,1,loss of taste and smell,Symptom Onset,Symptom Onset,True
+5,1,debilitating fatigue,Symptom Onset,Symptom Onset,True
+5,1,persistent symptoms,Symptom Onset,Symptom Offset,False
+5,1,"heart racing, difficulty concentrating, stress",Symptom Onset,Feelings,False
+5,1,identified as long-hauler,Diagnosis,Diagnosis,True
+5,1,experience long-term symptoms,Symptom Onset,Symptom Offset,False
+5,2,feeling weak and trouble breathing,Symptom Onset,Symptom Onset,True
+5,2,symptoms worsening quickly,Symptom Onset,Symptom Onset,True
+5,2,Symptoms identified as Covid-19,Diagnosis,Diagnosis,True
+5,2,Stress piling up,Feelings,Feelings,True
+5,2,contacting physician,Doctor Visit,Doctor Visit,True
+5,2,"bedridden:difficulty breathing, headache, conjunctivitis and more",Symptom Onset,Symptom Onset,True
+5,2,loss of taste and smell,Symptom Onset,Symptom Onset,True
+5,2,debilitating fatigue,Symptom Onset,Symptom Onset,True
+5,2,persistent symptoms,Symptom Onset,Symptom Offset,False
+5,2,"heart racing, difficulty concentrating, stress",Symptom Onset,Feelings,False
+5,2,identified as long-hauler,Diagnosis,Diagnosis,True
+5,2,experience long-term symptoms,Symptom Onset,Symptom Offset,False
+5,3,feeling weak and trouble breathing,Symptom Onset,Symptom Onset,True
+5,3,symptoms worsening quickly,Symptom Onset,Symptom Onset,True
+5,3,Symptoms identified as Covid-19,Diagnosis,Diagnosis,True
+5,3,Stress piling up,Feelings,Feelings,True
+5,3,contacting physician,Doctor Visit,Doctor Visit,True
+5,3,"bedridden:difficulty breathing, headache, conjunctivitis and more",Symptom Onset,Symptom Onset,True
+5,3,loss of taste and smell,Symptom Onset,Symptom Onset,True
+5,3,debilitating fatigue,Symptom Onset,Symptom Onset,True
+5,3,persistent symptoms,Symptom Onset,Symptom Offset,False
+5,3,"heart racing, difficulty concentrating, stress",Symptom Onset,Feelings,False
+5,3,identified as long-hauler,Diagnosis,Diagnosis,True
+5,3,experience long-term symptoms,Symptom Onset,Symptom Offset,False
+5,4,feeling weak and trouble breathing,Symptom Onset,Symptom Onset,True
+5,4,symptoms worsening quickly,Symptom Onset,Symptom Onset,True
+5,4,Symptoms identified as Covid-19,Diagnosis,Diagnosis,True
+5,4,Stress piling up,Feelings,Feelings,True
+5,4,contacting physician,Doctor Visit,Doctor Visit,True
+5,4,"bedridden:difficulty breathing, headache, conjunctivitis and more",Symptom Onset,Symptom Onset,True
+5,4,loss of taste and smell,Symptom Onset,Symptom Onset,True
+5,4,debilitating fatigue,Symptom Onset,Symptom Onset,True
+5,4,persistent symptoms,Symptom Onset,Symptom Offset,False
+5,4,"heart racing, difficulty concentrating, stress",Symptom Onset,Feelings,False
+5,4,identified as long-hauler,Diagnosis,Diagnosis,True
+5,4,experience long-term symptoms,Symptom Onset,Symptom Offset,False
+5,5,feeling weak and trouble breathing,Symptom Onset,Symptom Onset,True
+5,5,symptoms worsening quickly,Symptom Onset,Symptom Onset,True
+5,5,Symptoms identified as Covid-19,Diagnosis,Diagnosis,True
+5,5,Stress piling up,Feelings,Feelings,True
+5,5,contacting physician,Doctor Visit,Doctor Visit,True
+5,5,"bedridden:difficulty breathing, headache, conjunctivitis and more",Symptom Onset,Symptom Onset,True
+5,5,loss of taste and smell,Symptom Onset,Symptom Onset,True
+5,5,debilitating fatigue,Symptom Onset,Symptom Onset,True
+5,5,persistent symptoms,Symptom Onset,Symptom Offset,False
+5,5,"heart racing, difficulty concentrating, stress",Symptom Onset,Feelings,False
+5,5,identified as long-hauler,Diagnosis,Diagnosis,True
+5,5,experience long-term symptoms,Symptom Onset,Symptom Offset,False

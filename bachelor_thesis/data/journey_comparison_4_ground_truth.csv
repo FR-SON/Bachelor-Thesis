@@ -1,0 +1,11 @@
+,case:concept:name,activity,time:timestamp,time:end_timestamp,time:duration,event_type,attribute_location,activity_relevance,timestamp_correctness,correctness_confidence
+0,33,deterioration of the immune system due to masks,2020-07-01,2021-01-01,180 days,Symptom Onset,Home,High Relevance,True,1.00
+1,33,starting to cough,2021-01-01,2021-01-03,2 days,Symptom Onset,Home,High Relevance,True,1.00
+3,33,refusing to test,2021-01-01,2021-01-05,4 days,Lifestyle Change,Home,High Relevance,True,1.00
+2,33,getting a fever on top,2021-01-03,2021-01-05,2 days,Symptom Onset,Home,High Relevance,True,1.00
+4,33,testing positive for covid19,2021-04-15,2021-04-15,0 days,Diagnosis,Home,High Relevance,True,1.00
+5,33,quarantining myself,2021-04-15,2021-04-22,7 days,Lifestyle Change,Home,High Relevance,True,1.00
+6,33,testing negative for covid19,2021-04-22,2021-04-22,0 days,Diagnosis,Home,High Relevance,True,1.00
+7,33,getting first dose of vaccine,2021-10-01,2021-10-01,0 days,Treatment,Doctors,High Relevance,True,1.00
+8,33,getting second dose of vaccine,2021-11-14,2021-11-14,0 days,Treatment,Doctors,High Relevance,True,1.00
+9,33,getting third dose of vaccine,2022-03-01,2022-03-01,0 days,Treatment,Doctors,High Relevance,True,1.00

@@ -1,0 +1,15 @@
+,case:concept:name,activity,time:timestamp,time:end_timestamp,time:duration,event_type,attribute_location,activity_relevance,timestamp_correctness,correctness_confidence,end_timestamp_correctness
+0,64,starting to experience symptoms,2021-07-15,2021-07-15,0 days,Symptom Onset,Doctors,High Relevance,True,0.99,True
+1,64,isolating at home,2021-07-15,2021-07-15,0 days,Lifestyle Change,Home,Moderate Relevance,True,0.99,True
+2,64,informing family about situation,2021-07-15,2021-07-15,0 days,Lifestyle Change,Home,Low Relevance,True,1.00,True
+3,64,experiencing worsening symptoms,2021-07-15,2021-07-18,3 days,Symptom Onset,Hospital,High Relevance,True,0.50,True
+4,64,consulting doctor,2021-07-15,2021-07-15,0 days,Doctors Visit,Doctors,High Relevance,False,0.99,False
+5,64,receiving positive test results,2021-07-15,2021-07-15,0 days,Diagnosis,Doctors,High Relevance,False,0.98,False
+6,64,receiving advice for home quarantine,2021-07-15,2021-07-15,0 days,Lifestyle Change,Home,Moderate Relevance,False,0.98,False
+7,64,receiving care from wife,2021-07-15,2021-07-15,0 days,Lifestyle Change,Home,Low Relevance,False,0.99,False
+8,64,children supporting emotionally,2021-07-15,2021-07-15,0 days,Lifestyle Change,Home,Moderate Relevance,False,0.98,False
+9,64,slowly recovering from infection,2021-07-15,2021-07-15,0 days,Symptom Offset,Home,Moderate Relevance,False,0.98,False
+10,64,returning to work,2021-07-15,2021-07-15,0 days,Lifestyle Change,Home,Low Relevance,False,0.95,False
+11,64,receiving first vaccine dose,2021-09-01,2021-09-01,0 days,Treatment,Doctors,High Relevance,True,0.99,True
+12,64,experiencing mild side effects,2021-09-01,2021-09-01,0 days,Symptom Onset,Doctors,Low Relevance,True,0.99,True
+13,64,receiving second vaccine dose,2021-09-01,2021-09-01,0 days,Treatment,Doctors,High Relevance,False,0.98,False

@@ -1,0 +1,17 @@
+,case:concept:name,activity,time:timestamp,time:end_timestamp,time:duration,event_type,attribute_location,activity_relevance,timestamp_correctness,correctness_confidence,end_timestamp_correctness
+0,85,starting to experience symptoms,2021-05-15,2021-05-15,0 days,Symptom Onset,Doctors,High Relevance,True,1.00,True
+1,85,having more trouble breathing,2021-05-15,2021-05-15,0 days,Symptom Onset,Hospital,High Relevance,True,1.00,True
+2,85,starting to feel weak,2021-05-15,2021-05-15,0 days,Symptom Onset,Home,Moderate Relevance,True,1.00,True
+3,85,not being able to get out of bed,2021-05-15,2021-05-18,3 days,Symptom Onset,Hospital,High Relevance,True,0.66,True
+4,85,losing appetite,2021-05-15,2021-05-15,0 days,Symptom Onset,Home,Low Relevance,False,1.00,False
+5,85,having difficulty breathing,2021-05-15,2021-06-05,21 days,Symptom Onset,Hospital,High Relevance,True,0.72,False
+6,85,having a headache,2021-05-15,2021-05-15,0 days,Symptom Onset,Home,Low Relevance,True,0.99,True
+7,85,having conjunctivitis,2021-05-15,2021-05-15,0 days,Diagnosis,Doctors,Low Relevance,True,0.99,True
+8,85,having a sore throat,2021-05-15,2021-05-15,0 days,Symptom Onset,Home,Low Relevance,True,0.99,True
+9,85,having aches and pain,2021-05-15,2021-06-05,21 days,Symptom Onset,Doctors,Low Relevance,False,0.59,True
+15,85,being bedridden for three weeks,2021-05-15,2021-06-05,21 days,Symptom Onset,Home,High Relevance,True,0.86,True
+10,85,losing ability to taste or smell,2021-07-15,2021-07-15,0 days,Symptom Onset,Doctors,High Relevance,False,0.99,True
+11,85,experiencing debilitating fatigue,2021-07-15,2021-09-15,62 days,Symptom Onset,Doctors,High Relevance,False,0.84,False
+12,85,symptoms not disappearing,2021-09-15,2021-09-15,0 days,Symptom Offset,Doctors,High Relevance,True,1.00,True
+13,85,experiencing racing heartbeat,2021-09-15,2021-09-15,0 days,Symptom Onset,Doctors,High Relevance,True,0.98,True
+14,85,experiencing difficulty concentrating,2021-09-15,2021-09-15,0 days,Symptom Onset,Doctors,Moderate Relevance,True,1.00,True

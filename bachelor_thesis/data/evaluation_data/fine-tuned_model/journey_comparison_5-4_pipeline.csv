@@ -1,0 +1,17 @@
+,case:concept:name,activity,time:timestamp,time:end_timestamp,time:duration,event_type,attribute_location,activity_relevance,timestamp_correctness,correctness_confidence,end_timestamp_correctness
+0,88,starting to experience symptoms,2021-05-15,2021-05-15,0 days,Symptom Onset,Doctors,High Relevance,True,0.99,True
+1,88,having more trouble breathing,2021-05-15,2021-05-15,0 days,Symptom Onset,Hospital,High Relevance,True,1.00,True
+2,88,starting to feel weak,2021-05-15,2021-05-15,0 days,Symptom Onset,Home,Moderate Relevance,True,1.00,True
+3,88,not being able to get out of bed,2021-05-15,2021-05-18,3 days,Symptom Onset,Hospital,High Relevance,True,0.84,True
+4,88,losing appetite,2021-05-15,2021-05-15,0 days,Symptom Onset,Home,Moderate Relevance,False,0.99,False
+5,88,having difficulty breathing,2021-05-15,2021-06-05,21 days,Symptom Onset,Hospital,High Relevance,True,0.63,True
+6,88,having a headache,2021-05-15,2021-06-05,21 days,Symptom Onset,Home,Low Relevance,True,0.56,True
+7,88,having conjunctivitis,2021-05-15,2021-05-15,0 days,Diagnosis,Doctors,Low Relevance,True,0.99,False
+8,88,having a sore throat,2021-05-15,2021-05-15,0 days,Symptom Onset,Home,Low Relevance,True,1.00,False
+9,88,having aches and pain,2021-05-15,2021-06-05,21 days,Symptom Onset,Doctors,Low Relevance,False,0.63,False
+15,88,being bedridden for three weeks,2021-05-15,2021-06-05,21 days,Symptom Onset,Home,High Relevance,True,0.87,True
+10,88,losing ability to taste or smell,2021-07-15,2021-07-15,0 days,Symptom Onset,Doctors,High Relevance,False,0.99,True
+11,88,experiencing debilitating fatigue,2021-07-15,2021-09-15,62 days,Symptom Onset,Doctors,High Relevance,False,0.86,False
+12,88,symptoms not disappearing,2021-09-15,2021-09-15,0 days,Symptom Offset,Doctors,High Relevance,True,1.00,True
+13,88,experiencing racing heartbeat,2021-09-15,2021-09-15,0 days,Symptom Onset,Doctors,High Relevance,True,0.99,True
+14,88,experiencing difficulty concentrating,2021-09-15,2021-09-15,0 days,Symptom Onset,Doctors,Moderate Relevance,True,1.00,True

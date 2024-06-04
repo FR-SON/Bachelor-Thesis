@@ -1,0 +1,10 @@
+,case:concept:name,activity,time:timestamp,time:end_timestamp,time:duration,event_type,attribute_location,activity_relevance,timestamp_correctness,correctness_confidence,eval_event_type,end_timestamp_correctness
+0,68,starting to experience symptoms,2021-07-15,2021-07-18,3 days,Symptom Onset,Doctors,High Relevance,True,0.53,t,False
+1,68,isolating at home,2021-07-15,2021-07-18,3 days,Lifestyle Change,Home,Moderate Relevance,True,0.92,t,True
+3,68,getting tested for Covid-19,2021-07-15,2021-07-18,3 days,Diagnosis,Doctors,Moderate Relevance,False,0.63,t,True
+4,68,receiving positive test results,2021-07-15,2021-07-15,0 days,Diagnosis,Doctors,High Relevance,False,0.98,t,False
+5,68,advised home quarantine and treatment,2021-07-15,2021-07-29,14 days,Treatment,Home,High Relevance,False,0.62,f,False
+2,68,consulting a doctor,2021-07-18,2021-07-21,3 days,Doctors Visit,Doctors,High Relevance,True,0.82,t,False
+6,68,receiving first dose of vaccine,2021-09-01,2021-09-15,14 days,Treatment,Doctors,High Relevance,True,0.63,t,False
+7,68,experiencing mild side effects,2021-09-01,2021-09-15,14 days,Feelings,Doctors,Low Relevance,False,0.53,f,True
+8,68,receiving second dose of vaccine,2021-09-01,2021-09-15,14 days,Treatment,Doctors,High Relevance,False,0.75,t,True

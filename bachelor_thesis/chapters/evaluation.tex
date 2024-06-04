@@ -33,13 +33,13 @@ As mentioned in \autoref{sec:tracex} TracEX uses Few-Shot prompts for every task
 \subsubsection{Evaluating Activity Labelling}\label{sec:eval_activity}
 In the following we describe the process of evaluating the activity extraction capabilities of LLMs using the TracEX pipeline. The algorithm is implemented similarly in the Trace Testing Environment of TracEX.\\\\
 For each activity of the event log, we look for a matching activity in the ground truth. To prevent false positives, we limit the number of activities to ±2 from the current activity. So an activity from the event log with index 5 would be compared to the activities with index 3 to 7 from the ground truth. As mentioned before, two activity labels have to be semantically very similar to be considered a match. This is done by prompting GPT4o, a much more capable model compared to GPT3.5 turbo, to rate the semantic similarity. The response from the OpenAI API also includes a \verb|logprobs| parameter, that indicates how confident the model is in its response. If no activity from the ground truth is a match, this activity is considered \emph{unexpected}. If exactly one activity from the ground truth is a match, that activity is considered correctly extracted. If multiple activities from the ground truth are matched, the one with the highest confidence score is used. All activities from the ground truth that remain without a match are considered \emph{missing}. Two activities from the event log, that have a matching activity in the ground truth each, but which's order is interchanged in the event log compared to the ground truth are counted as a \emph{wrong order} error.\\
-The evaluation is automated to a large degree – but not perfect. We check every evaluation manually and adjust the results for the three metrics accordingly. The values for each metric can be checked for every run of the extraction pipeline for every model and every patient journey in the appendix at \ref{apx:eval_activity}
+The evaluation is automated to a large degree – but not perfect. We check every evaluation manually and adjust the results for the three metrics accordingly. The values for each metric can be checked for every run of the extraction pipeline for every model and every patient journey \href{https://github.com/FR-SON/Bachelor-Thesis/tree/main/bachelor_thesis/data/evaluation_data}{here}.
 
 \subsubsection{Evaluating Event Type Classification}\label{sec:eval_event_type}
-The metric described in \ref{sec:eventtype_metric} can be evaluated with a simple string comparison. The classified event types for all activities can be correct or incorrect. Because we injected the activities from the ground truth into the pipeline, we can compare them directly. The values for this metric can be checked for every run of the extraction pipeline for every model and every patient journey in the appendix at \ref{apx:eval_activity}.
+The metric described in \ref{sec:eventtype_metric} can be evaluated with a simple string comparison. The classified event types for all activities can be correct or incorrect. Because we injected the activities from the ground truth into the pipeline, we can compare them directly. The vale for each index in the extracted event log need to be identical to the value at the same index in the ground truth.
 
 \subsubsection{Evaluating Timestamp Extraction}\label{sec:eval_time}
-Time related information in real world patient journeys is in many cases so rare and vague that it is hard to determine a timestamp perfectly, even for a human. This is why we evaluate this metric completely manually, as we do not want to rely on LLMs to do it. The metric described in \ref{sec:time_metrics} is designed to leave room for interpretation, since we believe interpreting the time related information in a Patient Journey as a human is the best way to derive concrete timestamps correctly and with the certainty needed in an evaluation. The values for this metric can be checked for every run of the extraction pipeline for every model and every patient journey in the appendix at \ref{apx:eval_time}.
+Time related information in real world patient journeys is in many cases so rare and vague that it is hard to determine a timestamp perfectly, even for a human. This is why we evaluate this metric completely manually, as we do not want to rely on LLMs to do it. The metric described in \ref{sec:time_metrics} is designed to leave room for interpretation, since we believe interpreting the time related information in a Patient Journey as a human is the best way to derive concrete timestamps correctly and with the certainty needed in an evaluation.
 
 \subsection{Presentation of Results}\label{sec:results}
 In this chapter we will present and discuss the results we achieved by applying the metrics defined in Chapter \ref{sec:metrics} to the extractions created by the models trained in Chapter \ref{sec:multi-task-ft} and Chapter \ref{sec:single-task-ft}.
@@ -48,7 +48,7 @@ We will first showcase the Multitask fine-tuned model and secondly the single ta
 \subsubsection{Multi-Task Fine-Tuned Model}\label{sec_eval_multi}
 We will present the results for every task performed by the model in the following order: First we showcase the performance in labelling activities, followed by classifying event types of activities and lastly extracting timestamps for activities.
 
-\paragraph{Activity Labelling} The plots in Figure \ref{fig:eval_activities_rad} show comparisons of base model and fine-tuned model in all three metrics for each Patient Journey individually. The axes each display the error rate in the extraction results the models achieved. A smaller amplitude is desirable.\\
+\paragraph{Activity Labelling} The plots in Figure \ref{fig:eval_activities_rad} show comparisons of base model and multi-task fine-tuned model in all three metrics for each Patient Journey individually. The axes each display the error rate in the extraction results the models achieved. A smaller amplitude is desirable.\\
 \begin{figure}
   \centering
   \subfigure[Patient Journey Nr. 1]{\includegraphics[width=0.3\textwidth]{bachelor_thesis/images/activites_pj1.png}}
@@ -91,9 +91,37 @@ The final task we trained the multi-task fine-tuned model for is extracting time
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{bachelor_thesis/images/timestamp_all.png}
-    \caption{Bar Plot comparing the extraction results of GPT-3.5 Turbo and the Multi-Task Fine-Tuned model across all Patient Journeys~\ref{apx:pjs} for the task \quotes{Timestamp Extraction}}
+    \caption{Bar Plot comparing the extraction results of GPT-3.5 Turbo and the Multi-Task Fine-Tuned model across all Patient Journeys~\autoref{apx:pjs} for the task \quotes{Timestamp Extraction}}
     \label{fig:eval_time}
 \end{figure}
 
 
-\subsection{Single-Task Fine-Tuned Model}\label{sec:eval_single}
+\subsubsection{Single-Task Fine-Tuned Model}\label{sec:eval_single}
+The plots in \autoref{fig:eval_activities_single_rad} show comparisons of base model and single-task fine-tuned model in all three metrics for each Patient Journey individually. The axes each display the error rate in the extraction results the models achieved. A smaller amplitude is desirable.\\
+\begin{figure}
+  \centering
+  \subfigure[Patient Journey Nr. 1]{\includegraphics[width=0.3\textwidth]{bachelor_thesis/images/activites_pj1-single.png}}
+  \subfigure[Patient Journey Nr. 2]{\includegraphics[width=0.3\textwidth]{bachelor_thesis/images/activites_pj2-single.png}}
+  \subfigure[Patient Journey Nr. 3]{\includegraphics[width=0.3\textwidth]{bachelor_thesis/images/activites_pj3-single.png}}
+  \subfigure[Patient Journey Nr. 4]{\includegraphics[width=0.3\textwidth]{bachelor_thesis/images/activites_pj4-single.png}}
+  \subfigure[Patient Journey Nr. 5]{\includegraphics[width=0.3\textwidth]{bachelor_thesis/images/activites_pj5-single.png}}
+  \caption{Radar Plots comparing the extraction results of GPT-3.5 Turbo and the Single-Task Fine-Tuned model for Patient Journey 1-5~\ref{apx:pjs} for the task \quotes{Activity Labelling}}
+  \label{fig:eval_activities_single_rad}
+\end{figure}
+\autoref{fig:eval_activities_all_bar} illustrates the performance of both models across all patient journeys in a bar plot. Each bar represents the error rate in one of the metrics and the bars of the same metric for, each Patient Journey of base- and fine-tuned model respectively, overlap each other. A smaller amplitude is desirable. The fine-tuned model consistently scores better in the \emph{missing activity} metric, but only occasionally outperforms the base model in any other metric.
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{bachelor_thesis/images/activites_all-single.png}
+    \caption{Bar Plot comparing the extraction results of GPT-3.5 Turbo and the Single-Task Fine-Tuned model across all Patient Journeys~\ref{apx:pjs} for the task \quotes{Activity Labelling}} 
+    \label{fig:eval_activities_all_bar}
+\end{figure}
+
+\subsubsection{Comparison of Fine-Tuned Models}
+Lastly, we compare the results of the two fine-tuned models in their mutual task \quotes{Activity Labelling}. As you can see in \autoref{fig:eval_activities_all_comparison_bar} the multi-task fine-tuned model performs better in 8 out of 15 measurements and the single-task fine-tuned model performs better in the other 7 measurements. All models performed notably good on Patient Journey 3 and 4, so these seem to be the easiest for an LLM to extract information from. The single-task fine-tuned model got the best scores for both of them. This indicates, that the specialisation on one task increases the performance in easier conditions while not increasing the performance under more difficult conditions. We further discuss this in~\autoref{sec:conclusion}.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{bachelor_thesis/images/activites_all-single_vs_multi.png}
+    \caption{Bar Plot comparing the extraction results of multi-task and single-task fine-tuned model across all Patient Journeys~\ref{apx:pjs} for the task \quotes{Activity Labelling}} 
+    \label{fig:eval_activities_all_comparison_bar}
+\end{figure}

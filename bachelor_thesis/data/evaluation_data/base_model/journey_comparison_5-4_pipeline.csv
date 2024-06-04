@@ -1,0 +1,15 @@
+,case:concept:name,activity,time:timestamp,time:end_timestamp,time:duration,event_type,attribute_location,activity_relevance,timestamp_correctness,correctness_confidence,end_timestamp_correctness
+5,91,losing sense of taste and smell,2020-02-01,2020-05-15,104 days,Symptom Onset,Doctors,High Relevance,False,0.61,False
+0,91,starting to experience symptoms,2020-05-15,2020-05-15,0 days,Symptom Onset,Doctors,High Relevance,True,0.99,True
+1,91,realizing symptoms are due to Covid-19,2020-05-15,2020-05-20,5 days,Diagnosis,Doctors,High Relevance,True,0.66,False
+2,91,experiencing worsening symptoms,2020-05-15,2020-05-20,5 days,Symptom Onset,Hospital,High Relevance,True,0.86,True
+3,91,being bedridden for three weeks,2020-05-15,2020-06-05,21 days,Symptom Offset,Home,High Relevance,True,0.90,True
+4,91,losing appetite,2020-05-15,2020-06-05,21 days,Symptom Offset,Home,Low Relevance,True,0.64,True
+6,91,experiencing debilitating fatigue,2020-05-15,2020-05-15,0 days,Symptom Onset,Doctors,High Relevance,True,0.98,False
+7,91,experiencing long-term symptoms,2020-05-15,2020-05-15,0 days,Symptom Offset,Doctors,High Relevance,False,1.00,False
+8,91,being identified as a 'long-hauler',2020-05-15,2020-05-15,0 days,Diagnosis,Doctors,High Relevance,False,0.99,False
+9,91,experiencing racing heartbeat and shortness of breath,2020-05-15,2020-05-15,0 days,Symptom Onset,Hospital,High Relevance,False,0.97,False
+10,91,struggling with extreme fatigue and brain fog,2020-05-15,2020-05-15,0 days,Symptom Onset,Doctors,High Relevance,False,0.99,False
+11,91,fearing unemployment due to symptoms,2020-05-15,2020-05-15,0 days,Feelings,Home,Low Relevance,False,1.00,False
+12,91,feeling burdened and stressed about long-term condition,2020-05-15,2020-05-15,0 days,Feelings,Home,Moderate Relevance,False,0.97,False
+13,91,being grateful for access to healthcare,2020-05-15,2020-05-15,0 days,Feelings,Doctors,Low Relevance,False,0.95,False

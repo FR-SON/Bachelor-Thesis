@@ -1,19 +1,14 @@
 ,case:concept:name,activity,time:timestamp,time:end_timestamp,time:duration,event_type,attribute_location,activity_relevance,timestamp_correctness,correctness_confidence
-0,6,experiencing first covid 19 symptoms,2021-07-15,2021-07-17,2 days 00:00:00,Symptom Onset,Home,High Relevance,True,1.00
-1,6,isolating myself,2021-07-15,2021-08-02,21 days 00:00:00,Lifestyle Change,Home,High Relevance,True,1.00
-2,6,informing family,2021-07-15,2021-07-15,0 days 01:00:00,Lifestyle Change,Home,High Relevance,True,1.00
-3,6,putting loved ones over financial worries,2021-07-15,2021-07-15,0 days 00:00:00,Feelings,Home,High Relevance,True,1.00
-9,6,receiving emotional support from family,2021-07-15,2021-08-02,21 days 00:00:00,Feelings,Home,High Relevance,True,1.00
-8,6,focusing on resting while isolated,2021-07-17,2021-08-02,14 days 00:00:00,Treatment,Home,High Relevance,True,1.00
-4,6,experiencing worse symptoms,2021-07-17,2021-07-25,7 days 00:00:00,Symptom Onset,Home,High Relevance,True,1.00
-5,6,consulting family physician,2021-07-17,2021-07-17,0 days 01:00:00,Doctor Visit,Doctors,High Relevance,True,1.00
-6,6,getting tested for covid 19 in local testing center,2021-07-18,2021-07-18,0 days 02:00:00,Diagnosis,Doctors,High Relevance,True,1.00
-7,6,testing positive for covid 19,2021-07-18,2021-07-18,0 days 00:15:00,Diagnosis,Doctors,High Relevance,True,1.00
-10,6,experiencing slow recovery,2021-07-25,2021-08-02,7 days 00:00:00,Symptom Offset,Home,High Relevance,True,1.00
-11,6,returning to work with precautions,2021-08-02,2021-08-02,0 days 00:00:00,Lifestyle Change,Home,High Relevance,True,1.00
-12,6,getting vaccinated after consultation with doctor,2021-09-01,2021-09-01,0 days 01:00:00,Treatment,Doctors,High Relevance,True,1.00
-13,6,experiencing mild side effects from vaccine,2021-09-01,2021-09-03,2 days 00:00:00,Feelings,Home,High Relevance,True,1.00
-14,6,remainding optimistic and adhering to safety guidelines,2021-09-01,2021-09-03,2 days 00:00:00,Feelings,Home,High Relevance,True,1.00
-16,6,feeling a sense of relief,2021-09-19,2021-09-19,0 days 00:00:00,Feelings,Home,High Relevance,True,1.00
-15,6,getting the second vaccination,2021-09-19,2021-09-19,0 days 01:00:00,Treatment,Doctors,High Relevance,True,1.00
-17,6,feeling thankful for healthcare personal,2021-09-19,2021-09-19,0 days 00:00:00,Feelings,Home,High Relevance,True,1.00
+0,6,experiencing first covid 19 symptoms,2021-07-15,2021-07-17,2 days,Symptom Onset,Home,High Relevance,True,1.00
+1,6,isolating myself,2021-07-15,2021-08-05,21 days,Lifestyle Change,Home,High Relevance,True,1.00
+2,6,informing family,2021-07-15,2021-07-15,1 days,Lifestyle Change,Home,High Relevance,True,1.00
+6,6,focusing on resting while isolated,2021-07-15,2021-08-05,21 days,Treatment,Home,High Relevance,True,1.00
+3,6,experiencing worse symptoms,2021-07-17,2021-07-20,3 days,Symptom Onset,Home,High Relevance,True,1.00
+4,6,consulting family physician,2021-07-20,2021-07-20,1 days,Doctor Visit,Doctors,High Relevance,True,1.00
+5,6,testing positive for covid 19,2021-07-20,2021-07-20,1 days,Diagnosis,Doctors,High Relevance,True,1.00
+7,6,experiencing slow recovery,2021-07-27,2021-08-08,14 days,Symptom Offset,Home,High Relevance,True,1.00
+8,6,returning to work with precautions,2021-08-08,2021-08-08,1 days,Lifestyle Change,Home,High Relevance,True,1.00
+9,6,getting vaccinated after consultation with doctor,2021-09-01,2021-09-01,1 days,Treatment,Doctors,High Relevance,True,1.00
+10,6,experiencing mild side effects from vaccine,2021-09-01,2021-09-03,2 days,Symptom Onset,Home,High Relevance,True,1.00
+11,6,getting the second vaccination,2021-09-15,2021-09-15,1 days,Treatment,Doctors,High Relevance,True,1.00
+12,6,feeling a sense of relief,2021-09-15,2021-09-15,1 days,Feelings,Home,High Relevance,True,1.00

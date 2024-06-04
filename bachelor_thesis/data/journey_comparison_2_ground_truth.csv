@@ -1,0 +1,13 @@
+,case:concept:name,activity,time:timestamp,time:end_timestamp,time:duration,event_type,attribute_location,activity_relevance,timestamp_correctness,correctness_confidence
+0,7,experiencing first covid 19 symptoms,2021-06-15,2021-06-15,0 days 12:00:00,Symptom Onset,Home,High Relevance,True,1.00
+1,7,self-isolating to protect family,2021-06-15,2021-06-29,14 days 00:00:00,Lifestyle Change,Home,High Relevance,True,1.00
+2,7,experiencing progressing symptoms,2021-06-15,2021-06-18,3 days 00:00:00,Symptom Onset,Home,High Relevance,True,1.00
+3,7,following guidelines from healthcare authorities,2021-06-15,2021-06-29,14 days 00:00:00,Treatment,Home,High Relevance,True,1.00
+4,7,taking over-the-counter medication,2021-06-15,2021-06-18,3 days 00:00:00,Medication,Home,High Relevance,True,1.00
+5,7,taking telemedicine consultation,2021-06-18,2021-06-18,0 days 00:30:00,Doctor Visit,Home,High Relevance,True,1.00
+6,7,experiencing improving symptoms,2021-06-23,2021-06-25,2 days 00:00:00,Symptom Offset,Home,High Relevance,True,1.00
+7,7,leaving self-isolation and returning to normal activities,2021-06-29,2021-06-29,0 days 00:00:00,Lifestyle Change,Home,High Relevance,True,1.00
+8,7,getting first dose of vaccine,2021-09-01,2021-09-01,0 days 01:00:00,Treatment,Doctors,High Relevance,True,1.00
+9,7,experiencing mild side effects,2021-09-01,2021-09-04,3 days 00:00:00,System Onset,Home,High Relevance,True,1.00
+10,7,getting second dose of vaccine,2021-10-01,2021-10-01,0 days 01:00:00,Treatment,Doctors,High Relevance,True,1.00
+11,7,getting reassured about effect of vaccine,2021-10-02,2021-10-02,0 days 00:30:00,Doctor Visit,Doctors,High Relevance,True,1.00

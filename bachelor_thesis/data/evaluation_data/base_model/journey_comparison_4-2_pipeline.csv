@@ -1,0 +1,7 @@
+,case:concept:name,activity,time:timestamp,time:end_timestamp,time:duration,event_type,attribute_location,activity_relevance,timestamp_correctness,correctness_confidence,end_timestamp_correctness
+0,53,starting to experience symptoms,2020-08-01,2020-08-05,4 days,Symptom Onset,Doctors,High Relevance,False,0.52,False
+1,53,testing positive for Covid-19,2021-04-07,2021-04-14,7 days,Diagnosis,Doctors,High Relevance,True,0.93,False
+2,53,quarantining and getting negative PCR test,2021-04-07,2021-04-14,7 days,Symptom Offset,Home,Moderate Relevance,True,0.96,True
+3,53,receiving first dose of vaccine,2021-10-01,2021-11-12,42 days,Treatment,Doctors,High Relevance,True,0.85,False
+4,53,receiving second dose of vaccine,2021-11-19,2021-12-17,28 days,Treatment,Doctors,High Relevance,True,0.97,False
+5,53,receiving third dose of vaccine,2022-01-01,2022-02-12,42 days,Treatment,Doctors,High Relevance,True,0.81,False

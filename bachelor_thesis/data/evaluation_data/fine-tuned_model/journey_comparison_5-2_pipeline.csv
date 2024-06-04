@@ -1,0 +1,14 @@
+,case:concept:name,activity,time:timestamp,time:end_timestamp,time:duration,event_type,attribute_location,activity_relevance,timestamp_correctness,correctness_confidence,end_timestamp_correctness
+0,86,starting to experience symptoms,2020-05-15,2020-05-15,0 days,Symptom Onset,Doctors,High Relevance,True,0.99,True
+1,86,thinking symptoms are due to overwork,2020-05-15,2020-05-15,0 days,Lifestyle Change,Home,Low Relevance,True,0.98,True
+2,86,symptoms worsening quickly,2020-05-15,2020-05-18,3 days,Symptom Onset,Hospital,High Relevance,True,0.55,True
+3,86,getting bedridden,2020-05-15,2020-05-20,5 days,Symptom Onset,Hospital,High Relevance,False,0.91,False
+4,86,losing appetite,2020-05-15,2020-06-05,21 days,Symptom Onset,Home,Low Relevance,True,0.67,False
+5,86,losing sense of taste and smell,2020-05-15,2020-05-15,0 days,Symptom Onset,Doctors,High Relevance,True,0.96,True
+6,86,experiencing debilitating fatigue,2020-05-15,2020-05-15,0 days,Symptom Onset,Doctors,High Relevance,True,0.99,True
+7,86,symptoms persisting,2020-05-15,2020-05-15,0 days,Symptom Onset,Doctors,High Relevance,False,1.00,False
+8,86,experiencing racing heartbeat,2020-05-15,2020-05-15,0 days,Symptom Onset,Doctors,High Relevance,False,0.98,False
+9,86,experiencing difficulty concentrating,2020-05-15,2020-05-15,0 days,Symptom Onset,Doctors,Moderate Relevance,False,0.98,False
+10,86,being identified as a long-hauler,2020-05-15,2020-05-15,0 days,Diagnosis,Doctors,High Relevance,False,1.00,False
+11,86,experiencing enduring symptoms,2020-05-15,2020-05-15,0 days,Symptom Onset,Doctors,High Relevance,False,0.99,False
+12,86,experiencing extreme fatigue and brain fog,2020-05-15,2020-05-15,0 days,Symptom Onset,Doctors,High Relevance,False,0.98,False

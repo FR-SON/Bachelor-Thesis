@@ -1,0 +1,15 @@
+,case:concept:name,activity,time:timestamp,time:end_timestamp,time:duration,event_type,attribute_location,activity_relevance,timestamp_correctness,correctness_confidence
+0,8,experiencing first covid 19 symptoms,2022-08-15,2022-08-15,0 days 12:00:00,Symptom Onset,Home,High Relevance,True,1.00
+1,8,self-isolating to protect patients,2022-08-15,2022-08-29,0 days 00:00:00,Lifestyle Change,Home,High Relevance,True,1.00
+2,8,experiencing worse symptoms,2022-08-15,2022-08-18,3 days 00:00:00,Symptom Onset,Home,High Relevance,True,1.00
+3,8,consulting doctor virtually,2022-08-18,2022-08-18,0 days 00:30:00,Doctor Visit,Home,High Relevance,True,1.00
+4,8,monitoring oxygen levels,2022-08-18,2022-08-29,11 days 00:00:00,Treatment,Home,High Relevance,True,1.00
+5,8,taking prescribed medication,2022-08-18,2022-08-29,11 days 00:00:00,Medication,Home,High Relevance,True,1.00
+6,8,stabelizing condition,2022-08-18,2022-08-19,1 days 00:00:00,Symptom Offset,Home,High Relevance,True,1.00
+8,8,focusing on self-care,2022-08-18,2022-09-18,28 days 00:00:00,Lifestyle Change,Home,High Relevance,True,1.00
+9,8,relying on virtual support groups for camaraderie,2022-08-18,2022-08-29,11 days 00:00:00,Lifestyle Change,Home,High Relevance,True,1.00
+7,8,having difficulties carrying out daily duties,2022-08-20,2022-08-23,3 days 00:00:00,Feelings,Home,High Relevance,True,1.00
+10,8,getting the first dose of vaccination,2022-09-16,2022-09-16,0 days 01:00:00,Treatment,Doctors,High Relevance,True,1.00
+11,8,getting the second dose of vaccination,2022-10-04,2022-10-04,0 days 01:00:00,Treatment,Doctors,High Relevance,True,1.00
+12,8,feeling reliefed and protected,2022-10-04,2022-10-04,0 days 00:00:00,Feelings,Home,High Relevance,True,1.00
+13,8,prioritizing companionship over work,2022-10-04,2022-10-04,0 days 00:00:00,Lifestyle Change,Home,High Relevance,True,1.00

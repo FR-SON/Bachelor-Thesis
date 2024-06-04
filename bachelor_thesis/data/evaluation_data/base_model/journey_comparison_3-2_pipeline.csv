@@ -1,0 +1,11 @@
+,case:concept:name,activity,time:timestamp,time:end_timestamp,time:duration,event_type,attribute_location,activity_relevance,timestamp_correctness,correctness_confidence,end_timestamp_correctness
+0,50,starting to experience symptoms,2022-08-15,2022-08-19,4 days,Symptom Onset,Doctors,High Relevance,True,0.58,False
+1,50,isolating at home,2022-08-15,2022-08-19,4 days,Lifestyle Change,Home,Moderate Relevance,True,0.94,False
+2,50,experiencing difficulty breathing,2022-08-15,2022-08-19,4 days,Symptom Onset,Hospital,High Relevance,True,0.51,True
+3,50,seeking virtual consultation,2022-08-15,2022-08-19,4 days,Doctors Visit,Doctors,Moderate Relevance,False,0.77,True
+4,50,monitoring oxygen levels,2022-08-15,2022-08-19,4 days,Treatment,Home,High Relevance,False,0.76,False
+5,50,stabilizing condition without hospitalization,2022-08-15,2022-08-15,0 days,Symptom Offset,Doctors,Low Relevance,False,0.98,False
+6,50,relying on colleagues for support,2022-08-15,2022-08-15,0 days,Feelings,Home,Low Relevance,False,0.98,False
+7,50,focusing on self-care,2022-08-15,2022-08-29,14 days,Lifestyle Change,Home,Low Relevance,False,0.80,True
+8,50,joining virtual support groups,2022-08-15,2022-08-29,14 days,Lifestyle Change,Home,Moderate Relevance,False,0.72,False
+9,50,getting vaccinated with both doses,2022-08-15,2022-09-26,42 days,Treatment,Doctors,High Relevance,False,0.62,True

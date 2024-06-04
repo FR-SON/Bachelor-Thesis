@@ -1,0 +1,17 @@
+,case:concept:name,activity,time:timestamp,time:end_timestamp,time:duration,event_type,attribute_location,activity_relevance,timestamp_correctness,correctness_confidence,end_timestamp_correctness
+0,70,starting to experience symptoms,2021-06-15,2021-06-18,3 days,Symptom Onset,Doctors,High Relevance,True,0.95,False
+1,70,self-isolating at home,2021-06-15,2021-06-16,1 days,Lifestyle Change,Home,Moderate Relevance,True,0.81,False
+2,70,contacting primary care physician,2021-06-16,2021-06-16,0 days,Doctors Visit,Doctors,High Relevance,True,0.99,True
+3,70,"experiencing high fever, cough, fatigue",2021-06-18,2021-06-18,0 days,Symptom Onset,Doctors,High Relevance,True,0.98,True
+4,70,following healthcare guidelines,2021-06-18,2021-06-18,0 days,Lifestyle Change,Home,High Relevance,True,0.95,False
+5,70,continuing to stay isolated,2021-06-18,2021-06-18,0 days,Lifestyle Change,Home,Moderate Relevance,True,0.85,False
+6,70,reaching out to infectious disease specialist,2021-06-18,2021-06-18,0 days,Doctors Visit,Doctors,High Relevance,True,0.79,True
+7,70,receiving advice on symptom management,2021-06-18,2021-06-18,0 days,Treatment,Doctors,High Relevance,True,0.94,True
+8,70,gradual symptom improvement,2021-06-21,2021-06-21,0 days,Symptom Offset,Home,High Relevance,True,0.99,False
+9,70,continuing self-isolation,2021-06-21,2021-07-05,14 days,Lifestyle Change,Home,Moderate Relevance,True,0.94,False
+10,70,resuming normal activities,2021-07-05,2021-07-05,0 days,Lifestyle Change,Home,Low Relevance,False,1.00,False
+11,70,receiving first vaccine dose,2021-09-01,2021-09-01,0 days,Treatment,Doctors,High Relevance,True,0.95,True
+12,70,experiencing mild side effects,2021-09-01,2021-09-03,2 days,Symptom Onset,Doctors,Low Relevance,True,0.91,True
+13,70,receiving second vaccine dose,2021-10-01,2021-10-01,0 days,Treatment,Doctors,High Relevance,True,0.99,True
+14,70,following up with primary care physician,2021-10-01,2021-10-01,0 days,Doctors Visit,Doctors,High Relevance,True,0.99,True
+15,70,receiving reassurance about vaccine effectiveness,2021-10-01,2021-10-01,0 days,Treatment,Doctors,Low Relevance,True,0.99,True

@@ -1,0 +1,7 @@
+,case:concept:name,activity,time:timestamp,time:end_timestamp,time:duration,event_type,attribute_location,activity_relevance,timestamp_correctness,correctness_confidence,end_timestamp_correctness
+0,78,starting to experience symptoms,2021-01-01,2021-01-01,0 days,Symptom Onset,Doctors,High Relevance,True,0.94,True
+1,78,experiencing cough and fever,2021-01-01,2021-01-01,0 days,Symptom Onset,Doctors,High Relevance,True,0.94,True
+2,78,testing positive for Covid-19,2021-04-01,2021-04-07,6 days,Diagnosis,Doctors,High Relevance,True,0.90,False
+3,78,receiving first vaccine dose,2021-10-01,2021-10-01,0 days,Treatment,Doctors,High Relevance,True,0.94,True
+4,78,receiving second vaccine dose,2021-11-19,2021-11-26,7 days,Treatment,Doctors,High Relevance,True,0.95,False
+5,78,receiving third vaccine dose,2022-01-01,2022-01-01,0 days,Treatment,Doctors,High Relevance,True,0.96,True

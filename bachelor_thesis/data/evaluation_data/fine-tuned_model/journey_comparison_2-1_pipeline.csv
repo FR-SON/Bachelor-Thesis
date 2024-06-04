@@ -1,0 +1,13 @@
+,case:concept:name,activity,time:timestamp,time:end_timestamp,time:duration,event_type,attribute_location,activity_relevance,timestamp_correctness,correctness_confidence,end_timestamp_correctness
+0,69,starting to experience symptoms,2021-06-15,2021-06-16,1 days,Symptom Onset,Doctors,High Relevance,True,0.97,False
+1,69,self-isolating at home,2021-06-15,2021-06-16,1 days,Lifestyle Change,Home,High Relevance,True,0.94,False
+2,69,contacting primary care physician,2021-06-16,2021-06-16,0 days,Doctors Visit,Doctors,High Relevance,True,0.98,True
+3,69,"experiencing high fever, cough, fatigue",2021-06-16,2021-06-19,3 days,Symptom Onset,Doctors,High Relevance,True,0.54,True
+4,69,receiving telemedicine consultation,2021-06-19,2021-06-19,0 days,Doctors Visit,Home,Moderate Relevance,True,0.97,True
+5,69,receiving advice on symptom management,2021-06-19,2021-06-19,0 days,Treatment,Doctors,High Relevance,True,0.95,True
+6,69,gradual symptom improvement,2021-06-22,2021-06-29,7 days,Symptom Offset,Home,High Relevance,True,0.99,True
+7,69,resuming normal activities,2021-06-29,2021-06-29,0 days,Lifestyle Change,Home,Low Relevance,True,0.99,True
+8,69,receiving first vaccine dose,2021-09-01,2021-09-01,0 days,Treatment,Doctors,High Relevance,True,0.96,True
+9,69,experiencing mild side effects,2021-09-01,2021-09-04,3 days,Symptom Onset,Doctors,Low Relevance,True,0.82,True
+10,69,receiving second vaccine dose,2021-10-01,2021-10-01,0 days,Treatment,Doctors,High Relevance,True,0.99,True
+11,69,following up with primary care physician,2021-10-01,2021-10-01,0 days,Doctors Visit,Doctors,Moderate Relevance,True,0.98,True

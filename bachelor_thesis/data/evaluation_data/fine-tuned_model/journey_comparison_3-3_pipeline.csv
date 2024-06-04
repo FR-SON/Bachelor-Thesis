@@ -1,0 +1,16 @@
+,case:concept:name,activity,time:timestamp,time:end_timestamp,time:duration,event_type,attribute_location,activity_relevance,timestamp_correctness,correctness_confidence,end_timestamp_correctness
+0,75,starting to experience symptoms,2022-08-15,2022-08-15,0 days,Symptom Onset,Doctors,High Relevance,True,0.99,True
+1,75,experiencing fatigue and slight cough,2022-08-15,2022-08-15,0 days,Symptom Onset,Home,Moderate Relevance,True,0.96,True
+2,75,experiencing body aches and high fever,2022-08-15,2022-08-15,0 days,Symptom Onset,Doctors,High Relevance,True,0.98,True
+3,75,isolating at home,2022-08-15,2022-08-15,0 days,Lifestyle Change,Home,Moderate Relevance,True,0.99,True
+4,75,experiencing difficulty breathing,2022-08-15,2022-08-18,3 days,Symptom Onset,Hospital,High Relevance,True,0.65,True
+5,75,reaching out for virtual consultation,2022-08-15,2022-08-15,0 days,Doctors Visit,Home,Moderate Relevance,False,0.99,False
+6,75,monitoring oxygen levels,2022-08-15,2022-08-15,0 days,Lifestyle Change,Home,High Relevance,False,0.97,False
+7,75,prescribed medications for symptoms,2022-08-15,2022-08-15,0 days,Medication,Doctors,High Relevance,False,0.99,False
+8,75,stabilizing condition without hospitalization,2022-08-15,2022-08-15,0 days,Symptom Offset,Doctors,Moderate Relevance,False,0.97,False
+9,75,experiencing depleted energy levels,2022-08-15,2022-08-15,0 days,Symptom Onset,Home,Moderate Relevance,False,0.96,False
+10,75,colleagues covering hospital rounds,2022-08-15,2022-08-15,0 days,Lifestyle Change,Hospital,Low Relevance,False,0.96,False
+11,75,focusing on self-care,2022-08-15,2022-08-29,14 days,Lifestyle Change,Home,Low Relevance,False,0.71,False
+12,75,joining virtual support groups,2022-08-15,2022-08-15,0 days,Lifestyle Change,Home,Moderate Relevance,False,0.96,False
+13,75,receiving first vaccine dose,2022-08-15,2022-08-15,0 days,Treatment,Doctors,High Relevance,False,0.98,False
+14,75,receiving second vaccine dose,2022-08-15,2022-08-15,0 days,Treatment,Doctors,High Relevance,False,0.89,False

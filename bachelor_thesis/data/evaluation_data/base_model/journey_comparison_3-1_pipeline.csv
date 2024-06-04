@@ -1,0 +1,13 @@
+,case:concept:name,activity,time:timestamp,time:end_timestamp,time:duration,event_type,attribute_location,activity_relevance,timestamp_correctness,correctness_confidence,end_timestamp_correctness
+0,45,starting to experience symptoms,2022-08-15,2022-08-19,4 days,Symptom Onset,Doctors,High Relevance,True,0.61,False
+1,45,isolating at home,2022-08-15,2022-08-19,4 days,Lifestyle Change,Home,Moderate Relevance,True,0.92,False
+2,45,experiencing difficulty breathing,2022-08-15,2022-08-19,4 days,Symptom Onset,Hospital,High Relevance,True,0.55,True
+3,45,seeking virtual consultation,2022-08-15,2022-08-19,4 days,Doctors Visit,Doctors,Moderate Relevance,False,0.73,False
+4,45,monitoring oxygen levels,2022-08-15,2022-08-19,4 days,Treatment,Home,High Relevance,False,0.70,False
+5,45,avoiding hospitalization,2022-08-15,2022-08-15,0 days,Lifestyle Change,Home,High Relevance,False,0.95,False
+6,45,relying on colleagues for support,2022-08-15,2022-08-29,14 days,Feelings,Home,Low Relevance,False,0.58,True
+7,45,focusing on self-care,2022-08-15,2022-08-29,14 days,Lifestyle Change,Home,Low Relevance,False,0.72,True
+8,45,joining virtual support groups,2022-08-15,2022-08-29,14 days,Lifestyle Change,Home,Moderate Relevance,False,0.75,False
+9,45,getting vaccinated,2022-08-15,2022-09-26,42 days,Treatment,Doctors,High Relevance,False,0.85,True
+10,45,reflecting on single status,2022-08-15,2022-08-15,0 days,Feelings,Home,No Relevance,False,0.96,False
+11,45,prioritizing health and well-being,2022-08-15,2022-08-15,0 days,Lifestyle Change,Home,Moderate Relevance,False,0.97,False

@@ -1,0 +1,4 @@
+,case:concept:name,activity,time:timestamp,time:end_timestamp,time:duration,event_type,attribute_location,activity_relevance,timestamp_correctness,correctness_confidence,end_timestamp_correctness
+2,42,persistent symptoms after more than four months,2023-03-15,2023-07-15,122 days,Symptom Offset,Doctors,Moderate Relevance,False,0.90,False
+0,42,feeling weak and having trouble breathing,2023-05-15,2023-07-15,61 days,Symptom Onset,Hospital,High Relevance,False,0.94,False
+1,42,losing taste and smell,2023-05-15,2023-11-15,184 days,Symptom Onset,Doctors,High Relevance,False,0.66,False

@@ -1,0 +1,13 @@
+,case:concept:name,activity,time:timestamp,time:end_timestamp,time:duration,event_type,attribute_location,activity_relevance,timestamp_correctness,correctness_confidence
+0,40,feeling weak and trouble breathing,2024-05-15,2024-05-20,5 days,Symptom Onset,Home,High Relevance,True,1.00
+1,40,symptoms worsening quickly,2024-05-20,2024-05-23,3 days,Symptom Onset,Home,High Relevance,True,1.00
+5,40,Symptoms identified as Covid-19,2024-05-20,2024-05-20,0 days,Diagnosis,Home,High,True,1.00
+6,40,Stress piling up,2024-05-23,2024-05-23,0 days,Feelings,Home,High Relevance,True,1.00
+7,40,contacting physician,2024-05-23,2024-05-23,0 days,Doctor Visit,Doctors,High Relevance,True,1.00
+8,40,"bedridden:difficulty breathing, headache, conjunctivitis and more",2024-05-23,2024-06-06,14 days,Symptom Onset,Home,High Relevance,True,1.00
+2,40,loss of taste and smell,2024-06-06,2024-08-06,61 days,Symptom Onset,Home,High Relevance,True,1.00
+3,40,debilitating fatigue,2024-06-06,2024-08-06,61 days,Symptom Onset,Home,High Relevance,True,1.00
+4,40,persistent symptoms,2024-06-06,2024-10-06,123 days,Symptom Onset,Home,High Relevance,True,1.00
+9,40,"heart racing, difficulty concentrating, stress",2024-10-06,2024-10-06,0 days,Symptom Onset,Home,High Relevance,True,1.00
+10,40,identified as long-hauler,2024-10-06,2024-10-06,0 days,Diagnosis,Home,High Relevance,True,1.00
+11,40,experience long-term symptoms,2024-10-06,2024-10-06,0 days,Symptom Onset,Home,High Relevance,True,1.00

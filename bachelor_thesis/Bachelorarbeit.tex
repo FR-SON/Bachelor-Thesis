@@ -106,10 +106,11 @@
 \def\subsubsectionautorefname{Abschnitt}
 \def\figureautorefname{Abbildung}
 \def\lstlistingautorefname{Listing}
-\renewcommand{\appendixautorefname}{A}
+% \renewcommand{\appendixautorefname}{A}
 
 % my new commands
 \newcommand{\quotes}[1]{``#1''}
+\newcommand{\aref}[1]{\hyperref[#1]{A~\ref*{#1}}}
 
 
 \begin{document}

@@ -1,2 +1,18 @@
 \section{Conclusion}\label{sec:conclusion}
-Finishing sentences.
+This chapter completes the thesis. We will first discuss the limitations of the presented work and then outline the potential future work, that can make up for some of the limitations and extend the findings of our research.
+
+\subsection{Limitations}\label{sec:limitations}
+The approaches presented in \autoref{sec:fine} show some limitations. In the following paragraphs we disclose and discuss these limitations.\\\\
+Attaining optimal results in extracting event logs from Patient Journeys with LLMs necessitates accounting for several critical factors. Foremost among these is the quality of input; substandard input invariably leads to substandard output. This factor however can usually not be controlled.\\\\ Ensuring a well-formulated prompt is imperative, as prompt engineering should invariably precede fine-tuning in efforts to enhance quality.
+In this research, prompts are deliberately excluded as a variable, with the most current iterations from TracEX being employed. While these prompts are not without flaws and likely possess significant potential for enhancement, the main objective of this study is to assess the efficacy of fine-tuning in extracting event logs from patient journeys. This evaluation is conducted through a relative analysis approach; however, more definitive findings could be obtained if additional factors, such as the refinement of prompts, were also considered.\\\\
+Fine-tuning is also intrinsically tied to the quantity of data available. Within the context of this bachelor’s thesis, the collection of training data is considerably constrained by time limitations. Absent these constraints, a greater quantity of data could be feasible, potentially leading to superior outcomes.\\\\
+Both of the presented approaches to fine-tuning use supervised fine-tuning (SFT) techniques. As outlined in \autoref{sec:fine-tuning-def} there are more techniques we considered, and many more we did not consider. Ultimately, we decided to use OpenAI's models and services for our approaches, which focus on SFT. Other techniques such as Retrieval Augmented Generation, Reinforcement Learning\cite{ovadia_fine-tuning_2024} or Iterative Refinement with Self-Feedback~\cite{madaan_self-refine_2023} might also yield great results.
+
+\subsection{Future Work}\label{sec:future_work}
+Future investigations should further probe the potential ceiling of fine-tuning. Though this study demonstrates that fine-tuning can yield improvements, its ultimate limitations remain undetermined. 
+- more training data
+- use other models, that are more competent from the get-go
+- use more distinguished metrics, that determine weak points of the models in even more detail (what exactly makes models fail the extraction)
+Furthermore, as publicly accessible models continue to evolve—exemplified by the recent release of GPT-4—the scope of possibilities extends correspondingly. By 2026, innovations that are presently inconceivable are likely to become achievable.
+
+\subsection{Summary}\label{sec:summary}

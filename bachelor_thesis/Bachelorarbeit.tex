@@ -128,8 +128,8 @@
 	% listings
 	\pagenumbering{Roman}
 	\tableofcontents
-	\listoffigures
-    \lstlistoflistings
+	% \listoffigures
+    % \lstlistoflistings
 	\cleardoublepage
 	
 	% include your chapters
@@ -142,6 +142,12 @@
     \include{bachelor_thesis/chapters/evaluation}
 	\include{bachelor_thesis/chapters/conclusion}
     \include{bachelor_thesis/chapters/appendix}
+    \listoffigures
+    \addcontentsline{toc}{section}{List of Figures}
+    \lstlistoflistings
+    \addcontentsline{toc}{section}{List of Listings}
+    \listoftables
+    \addcontentsline{toc}{section}{List of Tables}
 
 	% bibliography
 	\cleardoublepage

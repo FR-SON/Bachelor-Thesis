@@ -18,7 +18,7 @@ We use a set of event types, so each pair is mutually exclusive. This means that
 The value we use from this metric is the percentage of \verb|True| and \verb|False| values respectively. This way, the number of errors is relative to the number of activities in each patient journey.\\
 Possible event types are: Symptom Onset, Symptom Offset, Doctor Visit, Hospital Admission, Hospital Discharge, Treatment, Medication, Lifestyle Change and Feelings.
 
-\subsubsection{Timestamp Extraction Metrics}\label{sec:time_metrics}
+\subsubsection{Timestamp Extraction Metric}\label{sec:time_metrics}
 Similar to the event type metric, a timestamp can be either extracted correctly or incorrectly, resulting in \verb|True| or \verb|False| when evaluated. In order to adhere to the commonly used standard in event logs, which is also required to produce valid XES files, the timestamps are in the format \verb|YYYY-MM-DD|. In many cases, including the sample patient journeys we use in the evaluation, patient journeys do not contain time information this precise. Most of the time, specifications are relative and vague. For this evaluation, we define a timestamp to be extracted correctly if the date is plausible in the context of the Patient Journey. For an activity described to have happened on \quotes{some day in April…}, any timestamp between 01.~April and 30.~April would be correct. This is unless other time-related information further specifies the timeframe in which an activity must have happened. Let $A_1$ be an activity that happens before activity $A_2$ and $t_2=$ \verb|2024-04-15q| be the timestamp for $A_2$. If $A_1$ is specified as \quotes{some day in April…}, only timestamps between 01.~April and 14.~April would be correct. The same goes for \quotes{as the weeks progressed}, \quotes{later that year} and similar phrases. As long as an extracted timestamp is correct relative to all other information given in the patient journey and is as precise as the text provides, it is deemed correct.\\
 Start and end timestamps can be correct or incorrect, independent of each other. The value we use from this metric is the percentage of \verb|True| and \verb|False| values respectively. This way, the number of errors is relative to the number of activities in each patient journey.
 
@@ -49,8 +49,9 @@ We will first showcase the multi-task fine-tuned model and, secondly, the single
 We will present the results for every task performed by the model in the following order: First, we showcase the performance in labelling activities, followed by classifying event types of activities, and lastly, extracting timestamps for activities.
 
 \paragraph{Activity Labelling} The plots in \autoref{fig:eval_activities_rad} show comparisons of the base model and multi-task fine-tuned model in all three metrics for each Patient Journey individually. The axes each display the error rate in the extraction results the models achieved. A smaller amplitude is desirable.\\
-\begin{figure}
+\begin{figure}[h]
   \centering
+  \captionsetup{belowskip=0pt,aboveskip=0pt}
   \subfigure[Patient Journey Nr. 1]{\includegraphics[width=0.3\textwidth]{bachelor_thesis/images/activites_pj1.png}}
   \subfigure[Patient Journey Nr. 2]{\includegraphics[width=0.3\textwidth]{bachelor_thesis/images/activites_pj2.png}}
   \subfigure[Patient Journey Nr. 3]{\includegraphics[width=0.3\textwidth]{bachelor_thesis/images/activites_pj3.png}}
@@ -66,16 +67,18 @@ We will present the results for every task performed by the model in the followi
     \item The multi-task fine-tuned model overall outperforms the base model, though not consistently
 \end{enumerate}
 
-\begin{figure}
+\begin{figure}[h]
     \centering
+    \captionsetup{belowskip=0pt,aboveskip=0pt}
     \includegraphics[width=\textwidth]{bachelor_thesis/images/activities_all.png}
     \caption{Bar Plot comparing the extraction results of GPT-3.5 Turbo and the Multi-Task Fine-Tuned model across all Patient Journeys~\aref{apx:pjs} for the task \quotes{Activity Labelling}} 
     \label{fig:eval_activities_bar}
 \end{figure}
 
 \paragraph{Event Type Classification} \autoref{fig:eval_event_types} shows the performance of both models across all patient journeys in a bar plot. Each bar represents the percentage of incorrectly classified event types. GPT-3.5 performs better on nearly every Patient Journey. This can have various reasons, like an under-representation of certain event types in the training data. We discuss the matter in \autoref{sec:discussion}. The gap between the two models is relatively small, to a point where it can be almost considered negligible. Fine-tuning the model did not increase the quality of the extraction results in this task. However, they are almost as good as the base models while not receiving examples in few-shot prompts with every request to the API. 
-\begin{figure}
+\begin{figure}[h]
     \centering
+    \captionsetup{belowskip=0pt,aboveskip=0pt}
     \includegraphics[width=\textwidth]{bachelor_thesis/images/event_types_all.png}
     \caption{Bar Plot comparing the extraction results of GPT-3.5 Turbo and the Multi-Task Fine-Tuned model across all Patient Journeys~\aref{apx:pjs} for the task \quotes{Event Type Classification}}
     \label{fig:eval_event_types}
@@ -88,9 +91,10 @@ The final task we trained the multi-task fine-tuned model for is extracting time
     \item The multi-task fine-tuned model achieved a better quality in almost every scenario. Especially the simpler Patient Journeys 2 and 4 were processed noticeably better.
 \end{enumerate}
 Even the fine-tuned model struggles with less well-structured description of time specifications and events with strong temporal relations. Nevertheless, fine-tuning increases the quality of number of correctly extracted timestamps.
-\begin{figure}
+\begin{figure}[h]
     \centering
-    \includegraphics[width=\textwidth]{bachelor_thesis/images/timestamp_all.png}
+    \captionsetup{belowskip=0pt,aboveskip=0pt}
+    \includegraphics[width=\textwidth]{bachelor_thesis/images/timestamp_all_sorted.png}
     \caption{Bar Plot comparing the extraction results of GPT-3.5 Turbo and the Multi-Task Fine-Tuned model across all Patient Journeys~\aref{apx:pjs} for the task \quotes{Timestamp Extraction}}
     \label{fig:eval_time}
 \end{figure}
@@ -98,8 +102,9 @@ Even the fine-tuned model struggles with less well-structured description of tim
 
 \subsubsection{Single-Task Fine-Tuned Model}\label{sec:eval_single}
 The plots in \autoref{fig:eval_activities_single_rad} show comparisons of the base model and single-task fine-tuned model in all three metrics for each Patient Journey individually. The axes each display the error rate in the extraction results the models achieved. A smaller amplitude is desirable.\\
-\begin{figure}
+\begin{figure}[h]
   \centering
+  \captionsetup{belowskip=0pt,aboveskip=0pt}
   \subfigure[Patient Journey Nr. 1]{\includegraphics[width=0.3\textwidth]{bachelor_thesis/images/activites_pj1-single.png}}
   \subfigure[Patient Journey Nr. 2]{\includegraphics[width=0.3\textwidth]{bachelor_thesis/images/activites_pj2-single.png}}
   \subfigure[Patient Journey Nr. 3]{\includegraphics[width=0.3\textwidth]{bachelor_thesis/images/activites_pj3-single.png}}
@@ -110,8 +115,9 @@ The plots in \autoref{fig:eval_activities_single_rad} show comparisons of the ba
 \end{figure}
 \autoref{fig:eval_activities_all_bar} illustrates the performance of both models across all patient journeys in a bar plot. Each bar represents the error rate in one of the metrics, and the bars of the same metric for each Patient Journey of base- and fine-tuned model overlap. A smaller amplitude is desirable. \\
 The fine-tuned model consistently scores better in the \emph{missing activity} metric but only occasionally outperforms the base model in any other metric. 
-\begin{figure}
+\begin{figure}[h]
     \centering
+    \captionsetup{belowskip=0pt,aboveskip=0pt}
     \includegraphics[width=\textwidth]{bachelor_thesis/images/activites_all-single.png}
     \caption{Bar Plot comparing the extraction results of GPT-3.5 Turbo and the Single-Task Fine-Tuned model across all Patient Journeys~\aref{apx:pjs} for the task \quotes{Activity Labelling}} 
     \label{fig:eval_activities_all_bar}
@@ -120,8 +126,9 @@ The fine-tuned model consistently scores better in the \emph{missing activity} m
 \subsubsection{Comparison of Fine-Tuned Models}
 Lastly, we compare the results of the two fine-tuned models in their mutual task \quotes{Activity Labelling}. \autoref{fig:eval_activities_all_comparison_bar} shows that the multi-task fine-tuned model performs better in 8 out of 15 measurements, and the single-task fine-tuned model performs better in the other 7 measurements. All models performed notably well on Patient Journey 3 and 4, indicating these are the easiest for an LLM to extract information from. The single-task fine-tuned model got the best scores for both of them. This indicates that the specialisation on one task increases the performance under easier conditions while not increasing the performance under more complex conditions. We further discuss this in~\autoref{sec:discussion}.
 
-\begin{figure}
+\begin{figure}[h]
     \centering
+    \captionsetup{belowskip=0pt,aboveskip=0pt}
     \includegraphics[width=\textwidth]{bachelor_thesis/images/activites_all-single_vs_multi.png}
     \caption{Bar Plot comparing the extraction results of multi-task and single-task fine-tuned model across all Patient Journeys~\aref{apx:pjs} for the task \quotes{Activity Labelling}} 
     \label{fig:eval_activities_all_comparison_bar}

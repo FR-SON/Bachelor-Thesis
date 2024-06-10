@@ -56,6 +56,9 @@
     breaklines=true,
     frame=single,
     backgroundcolor=\color{background},
+    rulecolor=\color{darkgray},
+    frame=single,
+    frameround=tttt,
     morekeywords={role,content},
     keywordstyle=\color{json-key},
     literate=
@@ -66,6 +69,23 @@
       {\}}{{{\color{delim}{\}}}}}{1}
       {[}{{{\color{delim}{[}}}}{1}
       {]}{{{\color{delim}{]}}}}{1},
+}
+\lstdefinelanguage{prompt}{
+    breaklines=true,
+    postbreak=\mbox{\textcolor{json-key}{$\hookrightarrow$}\space},
+    xleftmargin=2em,
+    xrightmargin=1em,
+    framexleftmargin=1em,
+    basicstyle=\small\ttfamily,
+    showstringspaces=false,
+    breaklines=true,
+    frame=single,
+    backgroundcolor=\color{background},
+    rulecolor=\color{darkgray},
+    frame=single,
+    frameround=tttt,
+    morekeywords={system, user, assistant},
+    keywordstyle=\color{json-key},
 }
 
 % stretch text vertically by factor (zeilenabstand)
@@ -101,10 +121,10 @@
 \renewcommand{\descriptionlabel}[1]{
 \normalfont\bfseries #1:}
 
-\def\sectionautorefname{Kapitel}
-\def\subsectionautorefname{Abschnitt}
-\def\subsubsectionautorefname{Abschnitt}
-\def\figureautorefname{Abbildung}
+% \def\sectionautorefname{Chapter}
+% \def\subsectionautorefname{Abschnitt}
+% \def\subsubsectionautorefname{Abschnitt}
+% \def\figureautorefname{Abbildung}
 \def\lstlistingautorefname{Listing}
 
 
@@ -135,7 +155,7 @@
 	% include your chapters
 	\pagenumbering{arabic} 
 
-	\include{bachelor_thesis/chapters/introduction}
+	\include{bachelor_thesis/chapters/introduction_v2}
     \include{bachelor_thesis/chapters/preliminaries}
 	\include{bachelor_thesis/chapters/related_work}
     \include{bachelor_thesis/chapters/fine-tuning}

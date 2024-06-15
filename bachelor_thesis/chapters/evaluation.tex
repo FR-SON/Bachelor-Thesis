@@ -24,16 +24,17 @@ Start and end timestamps can be correct or incorrect, independent of each other.
 
 \subsection{Evaluation Process}\label{sec:eval_process}
 In this chapter, we will describe the process of evaluating the models trained in \autoref{sec:multi-task-ft} and \autoref{sec:single-task-ft} using the metrics proposed in \autoref{sec:metrics}.\\
-In order to evaluate the quality of the extraction performed by the various models, we need Patient Journeys to extract event logs from. First, we assemble a collection of Patient Journeys that pose different challenges. They are listed in full length in the appendix at \aref{apx:pjs}. They include well-structured descriptions of consecutive events and explicitly stated timestamps, but also implied activities and events with strong temporal relations that are not easily understood without considering a big context window. In short, the reference patient journeys provide diverse challenges, featuring both easy and hard-to-extract information.\\
-We want to conduct comparative analyses between LLM models. To make these as fair and deterministic as possible, the next step is to create ground truths for every Patient Journey and every task performed on them. They are listed in the appendix at \aref{apx:ground_truths}. We later on use the same Patient Journeys and respective ground truths for all models.\\
+In order to evaluate the quality of the extraction performed by the various models, we need Patient Journeys to extract event logs from. First, we assemble a collection of Patient Journeys that pose different challenges. They are listed in full length in the appendix at \ref{apx:pjs}. They include well-structured descriptions of consecutive events and explicitly stated timestamps, but also implied activities and events with strong temporal relations that are not easily understood without considering a big context window. In short, the reference patient journeys provide diverse challenges, featuring both easy and hard-to-extract information.\\
+We want to conduct comparative analyses between LLM models. To make these as fair and deterministic as possible, the next step is to create ground truths for every Patient Journey and every task performed on them. They are listed in the appendix at \ref{apx:ground_truths}. We later on use the same Patient Journeys and respective ground truths for all models.\\
 We perform the extraction itself using the TracEX pipeline. To address the dependency of the Event Type Classification step detailed in \autoref{sec:back}, we inject the activities from the ground truth into the pipeline before executing that step. This ensures that no previous step affects the results of the extraction in an uncontrolled way.\\\\
-The extraction uses LLMs, which are non-deterministic by design. Due to that fact, the results vary between executions, even with the same input. To solve this issue, we perform each execution multiple times and use the mean of all values between the executions for the evaluation. All datasets without the mean calculation are stored in \href{https://github.com/FR-SON/Bachelor-Thesis}{this repository}.\\\\
-As mentioned in \autoref{sec:tracex}, TracEX uses Few-Shot prompts for every task we examine in this thesis. The fine-tuned model will perform all tasks without the additional examples in the few-shot prompts since the training data should suffice to convey what is demanded from the model.
+The extraction uses LLMs, which are non-deterministic by design. Due to that fact, the results vary between executions, even with the same input. To solve this issue, we perform each execution multiple times and use the mean of all values between the executions for the evaluation. All datasets without the mean calculation are archived in the aforementioned repository, together with the Patient Journeys.\\\\
+As mentioned in \autoref{sec:tracex}, TracEX uses Few-Shot prompts for every task we examine in this thesis. The fine-tuned model will perform all tasks without the additional examples in the few-shot prompts since the training data should suffice to convey what is demanded from the model.\\
+% Every Journey will be preprocessed~\ref{sec:tracex} before every extraction, regardless of model or task.
 
 \subsubsection{Evaluating Activity Labelling}\label{sec:eval_activity}
 In this chapter, we describe the process of evaluating the activity label extraction capabilities of LLMs using the TracEX pipeline. Our approach primarily involves the use of automated processes. The following algorithm is implemented similarly in the Trace Testing Environment of TracEX.\\\\
 For each activity in the event log, we look for a matching activity in the ground truth. We limit the number of activities to ±2 from the current activity to prevent false positives. We assume the activities are sorted by start timestamp. So, an activity from the event log with index 5 would be compared to the activities with index 3 to 7 from the ground truth. As mentioned earlier, two activity labels must be semantically very similar to be considered a match. This is done by prompting GPT4o, a much more capable model than GPT-3.5 Turbo, to rate the semantic similarity. The response from the OpenAI API also includes a \verb|logprobs| parameter that indicates how confident the model is in its response. If no activity from the ground truth matches, we consider this activity \emph{unexpected}. If exactly one activity from the ground truth is a match, that activity is considered correctly extracted. If multiple activities from the ground truth are matched, we use the one with the highest confidence score and consider the activity correctly extracted.  All activities from the ground truth that remain without a match are considered \emph{missing}. Two activities from the event log with a matching activity in the ground truth each, but whose order is interchanged in the event log compared to the ground truth, are counted as a \emph{wrong order} error.\\
-The evaluation is automated to a large degree – but not perfect. We manually check every evaluation and adjust the three metrics' results accordingly. The values for each metric can be checked for every run of the extraction pipeline for every model and every patient journey \href{https://github.com/FR-SON/Bachelor-Thesis/tree/main/bachelor_thesis/data/evaluation_data}{here}.
+The evaluation is automated to a large degree – but not perfect. We manually check every evaluation and adjust the three metrics' results accordingly. The values for each metric can be checked for every run of the extraction pipeline for every model and every Patient Journey in the repository.
 
 \subsubsection{Evaluating Event Type Classification}\label{sec:eval_event_type}
 The metric described in \autoref{sec:eventtype_metric} can be evaluated with a simple string comparison. The classified event types for all activities can be correct or incorrect. Because we injected the activities from the ground truth into the pipeline, we can compare them directly. The value for each index in the extracted event log must be identical to the value at the same index in the ground truth.
@@ -43,12 +44,12 @@ Time-related information in real-world Patient Journeys is, in many cases, so ra
 
 \subsection{Presentation of Results}\label{sec:results}
 In this chapter, we will present and discuss the results we achieved by applying the metrics defined in \autoref{sec:metrics} to the event logs created by the models trained in \autoref{sec:multi-task-ft} and \autoref{sec:single-task-ft}.\\
-We will first showcase the multi-task fine-tuned model and, secondly, the single-task fine-tuned model, comparing each to GPT-3.5 Turbo. We perform the extraction on the Patient Journeys listed in \aref{apx:pjs}.
+We will first showcase the multi-task fine-tuned model and, secondly, the single-task fine-tuned model, comparing each to GPT-3.5 Turbo. We perform the extraction on the Patient Journeys listed in \ref{apx:pjs}.
 
 \subsubsection{Multi-Task Fine-Tuned Model}\label{sec_eval_multi}
 We will present the results for every task performed by the model in the following order: First, we showcase the performance in labelling activities, followed by classifying event types of activities, and lastly, extracting timestamps for activities.
 
-\begin{figure}[h!]
+\begin{figure}[htb]
   \centering
   \captionsetup{belowskip=0pt,aboveskip=0pt}
   \subfigure[Patient Journey Nr. 1]{\includegraphics[width=0.3\textwidth]{bachelor_thesis/images/activites_pj1.png}}
@@ -56,7 +57,7 @@ We will present the results for every task performed by the model in the followi
   \subfigure[Patient Journey Nr. 3]{\includegraphics[width=0.3\textwidth]{bachelor_thesis/images/activites_pj3.png}}
   \subfigure[Patient Journey Nr. 4]{\includegraphics[width=0.3\textwidth]{bachelor_thesis/images/activites_pj4.png}}
   \subfigure[Patient Journey Nr. 5]{\includegraphics[width=0.3\textwidth]{bachelor_thesis/images/activites_pj5.png}}
-  \caption{Comparison of GPT-3.5 Turbo and multi-task fine-tuned model for Patient Journey 1-5~\aref{apx:pjs} for the task \quotes{Activity Labelling}}
+  \caption{Comparison of GPT-3.5 Turbo and multi-task fine-tuned model for Patient Journey 1-5~\ref{apx:pjs} for the task \quotes{Activity Labelling}}
   \label{fig:eval_activities_rad}
 \end{figure}
 \paragraph{Activity Labelling} The plots in \autoref{fig:eval_activities_rad} show comparisons of the base model and multi-task fine-tuned model in all three metrics for each Patient Journey individually. The axes each display the error rate in the extraction results the models achieved. A smaller amplitude is desirable.\\
@@ -67,11 +68,11 @@ We will present the results for every task performed by the model in the followi
     \item The multi-task fine-tuned model overall outperforms the base model, though not consistently
 \end{enumerate}
 
-\begin{figure}[h!t]
+\begin{figure}[ht]
     \centering
     \captionsetup{belowskip=0pt,aboveskip=0pt}
     \includegraphics[width=\textwidth]{bachelor_thesis/images/activities_all.png}
-    \caption{Comparison of GPT-3.5 Turbo and multi-task fine-tuned model across all Patient Journeys~\aref{apx:pjs} for the task \quotes{Activity Labelling}} 
+    \caption{Comparison of GPT-3.5 Turbo and multi-task fine-tuned model across all Patient Journeys~\ref{apx:pjs} for the task \quotes{Activity Labelling}} 
     \label{fig:eval_activities_bar}
 \end{figure}
 
@@ -81,7 +82,7 @@ We will present the results for every task performed by the model in the followi
     \centering
     \captionsetup{belowskip=0pt,aboveskip=0pt}
     \includegraphics[width=\textwidth]{bachelor_thesis/images/event_types_all.png}
-    \caption{Comparison of GPT-3.5 Turbo and multi-task fine-tuned model across all Patient Journeys~\aref{apx:pjs} for the task \quotes{Event Type Classification}}
+    \caption{Comparison of GPT-3.5 Turbo and multi-task fine-tuned model across all Patient Journeys~\ref{apx:pjs} for the task \quotes{Event Type Classification}}
     \label{fig:eval_event_types}
 \end{figure}
 
@@ -93,11 +94,11 @@ The final task we trained the multi-task fine-tuned model for is extracting time
     \item The multi-task fine-tuned model achieved a better quality in almost every scenario. Especially Patient Journey 1, 2 and 3 were processed noticeably better.
 \end{enumerate}
 Even the fine-tuned model struggles with less well-structured description of time specifications and events with strong temporal relations. Nevertheless, fine-tuning increases the quality of number of correctly extracted timestamps.
-\begin{figure}[h!]
+\begin{figure}[h]
     \centering
     \captionsetup{belowskip=0pt,aboveskip=0pt}
     \includegraphics[width=\textwidth]{bachelor_thesis/images/timestamp_all_sorted.png}
-    \caption{Comparison of GPT-3.5 Turbo and multi-task fine-tuned model across all Patient Journeys~\aref{apx:pjs} for the task \quotes{Timestamp Extraction}}
+    \caption{Comparison of GPT-3.5 Turbo and multi-task fine-tuned model across all Patient Journeys~\ref{apx:pjs} for the task \quotes{Timestamp Extraction}}
     \label{fig:eval_time}
 \end{figure}
 
@@ -112,7 +113,7 @@ The plots in \autoref{fig:eval_activities_single_rad} show comparisons of the ba
   \subfigure[Patient Journey Nr. 3]{\includegraphics[width=0.3\textwidth]{bachelor_thesis/images/activites_pj3-single.png}}
   \subfigure[Patient Journey Nr. 4]{\includegraphics[width=0.3\textwidth]{bachelor_thesis/images/activites_pj4-single.png}}
   \subfigure[Patient Journey Nr. 5]{\includegraphics[width=0.3\textwidth]{bachelor_thesis/images/activites_pj5-single.png}}
-  \caption{Comparison of GPT-3.5 Turbo and the Single-Task Fine-Tuned model for Patient Journey 1-5~\aref{apx:pjs} for the task \quotes{Activity Labelling}}
+  \caption{Comparison of GPT-3.5 Turbo and the Single-Task Fine-Tuned model for Patient Journey 1-5~\ref{apx:pjs} for the task \quotes{Activity Labelling}}
   \label{fig:eval_activities_single_rad}
 \end{figure}
 \autoref{fig:eval_activities_all_bar} illustrates the performance of both models across all patient journeys in a bar plot. Each bar represents the error rate in one of the metrics, and the bars of the same metric for each Patient Journey of base- and fine-tuned model overlap. A smaller amplitude is desirable. \\
@@ -121,7 +122,7 @@ The fine-tuned model consistently scores better in the \emph{missing activity} m
     \centering
     \captionsetup{belowskip=0pt,aboveskip=0pt}
     \includegraphics[width=\textwidth]{bachelor_thesis/images/activites_all-single.png}
-    \caption{Comparison of GPT-3.5 Turbo and  Single-Task Fine-Tuned model across all Patient Journeys~\aref{apx:pjs} for the task \quotes{Activity Labelling}} 
+    \caption{Comparison of GPT-3.5 Turbo and  Single-Task Fine-Tuned model across all Patient Journeys~\ref{apx:pjs} for the task \quotes{Activity Labelling}} 
     \label{fig:eval_activities_all_bar}
 \end{figure}
 
@@ -132,6 +133,6 @@ Lastly, we compare the results of the two fine-tuned models in their mutual task
     \centering
     \captionsetup{belowskip=0pt,aboveskip=0pt}
     \includegraphics[width=\textwidth]{bachelor_thesis/images/activites_all-single_vs_multi.png}
-    \caption{Comparison of multi-task and single-task fine-tuned model across all Patient Journeys~\aref{apx:pjs} for the task \quotes{Activity Labelling}} 
+    \caption{Comparison of multi-task and single-task fine-tuned model across all Patient Journeys~\ref{apx:pjs} for the task \quotes{Activity Labelling}} 
     \label{fig:eval_activities_all_comparison_bar}
 \end{figure}

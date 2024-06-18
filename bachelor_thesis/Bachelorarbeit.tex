@@ -27,6 +27,8 @@
 \usepackage{caption}
 \usepackage{subfigure}
 \usepackage{enumitem}
+\usepackage[style=numeric, maxbibnames=3, maxcitenames=2, backend=biber]{biblatex}
+\addbibresource{bibliography/references.bib}
 
 
 
@@ -168,6 +170,13 @@
     \include{bachelor_thesis/chapters/evaluation}
     \include{bachelor_thesis/chapters/discussion}
 	\include{bachelor_thesis/chapters/conclusion}
+	
+    % \cleardoublepage
+	\renewcommand{\refname}{References}
+	% \bibliographystyle{plain}
+	% \bibliography{bibliography/references}
+    \printbibliography
+    \pagestyle{empty}
     \appendix
     \include{bachelor_thesis/chapters/appendix}
     % \listoffigures
@@ -178,9 +187,5 @@
     % \addcontentsline{toc}{section}{List of Tables}
 
 	% bibliography
-	\cleardoublepage
-	\renewcommand{\refname}{References}
-	\bibliographystyle{plain}
-	\bibliography{bibliography/references}
 
 \end{document}

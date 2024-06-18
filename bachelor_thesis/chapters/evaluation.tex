@@ -52,11 +52,11 @@ We will present the results for every task performed by the model in the followi
 \begin{figure}[p]
   \centering
   \captionsetup{belowskip=0pt,aboveskip=0pt}
-  \subfigure[Patient Journey Nr. 1]{\includegraphics[width=0.3\textwidth]{bachelor_thesis/images/activites_pj1.png}}
-  \subfigure[Patient Journey Nr. 2]{\includegraphics[width=0.3\textwidth]{bachelor_thesis/images/activites_pj2.png}}
-  \subfigure[Patient Journey Nr. 3]{\includegraphics[width=0.3\textwidth]{bachelor_thesis/images/activites_pj3.png}}
-  \subfigure[Patient Journey Nr. 4]{\includegraphics[width=0.3\textwidth]{bachelor_thesis/images/activites_pj4.png}}
-  \subfigure[Patient Journey Nr. 5]{\includegraphics[width=0.3\textwidth]{bachelor_thesis/images/activites_pj5.png}}
+  \subfigure[Patient Journey No. 1]{\includegraphics[width=0.3\textwidth]{bachelor_thesis/images/activites_pj1.png}}
+  \subfigure[Patient Journey No. 2]{\includegraphics[width=0.3\textwidth]{bachelor_thesis/images/activites_pj2.png}}
+  \subfigure[Patient Journey No. 3]{\includegraphics[width=0.3\textwidth]{bachelor_thesis/images/activites_pj3.png}}
+  \subfigure[Patient Journey No. 4]{\includegraphics[width=0.3\textwidth]{bachelor_thesis/images/activites_pj4.png}}
+  \subfigure[Patient Journey No. 5]{\includegraphics[width=0.3\textwidth]{bachelor_thesis/images/activites_pj5.png}}
   \caption{Comparison of GPT-3.5 Turbo and multi-task fine-tuned model for Patient Journey 1-5~\ref{apx:pjs} for the task \quotes{Activity Labelling}}
   \label{fig:eval_activities_rad}
 \end{figure}
@@ -64,7 +64,7 @@ We will present the results for every task performed by the model in the followi
 \autoref{fig:eval_activities_bar} illustrates the performance of both models across all patient journeys in a bar plot. Each bar represents the error rate in one of the metrics, and the bars of the same metric for each Patient Journey of base- and fine-tuned model overlap. A smaller amplitude is desirable. Although the fine-tuned model performed slightly worse in some metrics, its supremacy is evident. Especially with Patient Journey~1,2 and 4, the difference is clearly notable. We make the following observations:
 \begin{enumerate}
     \item \emph{Wrong Order} is the error type with the least occurrences across both models. On average, there are more \emph{Missing Activity} errors than \emph{Unexpected Activity} errors. This indicates that both models tend to rather not include relevant events than include irrelevant or imaginary events.
-    \item Patient Journey Nr.~5, which we assess as the most challenging, has the highest overall error rate. This hints at a correlation between lacklustre structure in Patient Journeys and worse event log quality.
+    \item Patient Journey No.~5, which we assess as the most challenging, has the highest overall error rate. This hints at a correlation between lacklustre structure in Patient Journeys and worse event log quality.
     % \item The multi-task fine-tuned model overall outperforms the base model, though not consistently
 \end{enumerate}
 
@@ -107,11 +107,11 @@ The plots in \autoref{fig:eval_activities_single_rad} show comparisons of the ba
 \begin{figure}[p]
   \centering
   \captionsetup{belowskip=0pt,aboveskip=0pt}
-  \subfigure[Patient Journey Nr. 1]{\includegraphics[width=0.3\textwidth]{bachelor_thesis/images/activites_pj1-single.png}}
-  \subfigure[Patient Journey Nr. 2]{\includegraphics[width=0.3\textwidth]{bachelor_thesis/images/activites_pj2-single.png}}
-  \subfigure[Patient Journey Nr. 3]{\includegraphics[width=0.3\textwidth]{bachelor_thesis/images/activites_pj3-single.png}}
-  \subfigure[Patient Journey Nr. 4]{\includegraphics[width=0.3\textwidth]{bachelor_thesis/images/activites_pj4-single.png}}
-  \subfigure[Patient Journey Nr. 5]{\includegraphics[width=0.3\textwidth]{bachelor_thesis/images/activites_pj5-single.png}}
+  \subfigure[Patient Journey No. 1]{\includegraphics[width=0.3\textwidth]{bachelor_thesis/images/activites_pj1-single.png}}
+  \subfigure[Patient Journey No. 2]{\includegraphics[width=0.3\textwidth]{bachelor_thesis/images/activites_pj2-single.png}}
+  \subfigure[Patient Journey No. 3]{\includegraphics[width=0.3\textwidth]{bachelor_thesis/images/activites_pj3-single.png}}
+  \subfigure[Patient Journey No. 4]{\includegraphics[width=0.3\textwidth]{bachelor_thesis/images/activites_pj4-single.png}}
+  \subfigure[Patient Journey No. 5]{\includegraphics[width=0.3\textwidth]{bachelor_thesis/images/activites_pj5-single.png}}
   \caption{Comparison of GPT-3.5 Turbo and the Single-Task Fine-Tuned model for Patient Journey 1-5~\ref{apx:pjs} for the task \quotes{Activity Labelling}}
   \label{fig:eval_activities_single_rad}
 \end{figure}

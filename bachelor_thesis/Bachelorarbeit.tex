@@ -27,10 +27,12 @@
 \usepackage{caption}
 \usepackage{subfigure}
 \usepackage{enumitem}
-\usepackage[style=numeric, maxbibnames=3, maxcitenames=2, backend=biber]{biblatex}
+\usepackage[style=numeric, maxbibnames=1, maxcitenames=1, backend=bibtex]{biblatex}
+% \usepackage[numbers, round]{natbib}
 \addbibresource{bibliography/references.bib}
+\DeclareFieldFormat[article,inbook,incollection,inproceedings,patent,thesis,unpublished, book,periodical]{title}{\mkbibemph{#1}} % Titles in quotation marks
 
-
+\AtEveryBibitem{\clearfield{urlyear}}
 
 \addto\extrasenglish{%
   \renewcommand{\sectionautorefname}{Section}

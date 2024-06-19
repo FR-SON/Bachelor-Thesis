@@ -30,7 +30,7 @@
 \usepackage[style=numeric, maxbibnames=1, maxcitenames=1, backend=bibtex]{biblatex}
 % \usepackage[numbers, round]{natbib}
 \addbibresource{bibliography/references.bib}
-\DeclareFieldFormat[article,inbook,incollection,inproceedings,patent,thesis,unpublished, book,periodical]{title}{\mkbibemph{#1}} % Titles in quotation marks
+\DeclareFieldFormat[article,inbook,incollection,inproceedings,patent,thesis,unpublished,book,periodical,misc]{title}{\mkbibquote{#1}}
 
 \AtEveryBibitem{\clearfield{urlyear}}
 

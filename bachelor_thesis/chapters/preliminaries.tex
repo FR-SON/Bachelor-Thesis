@@ -38,7 +38,7 @@ One message set closely resembles one turn of a regular exchange with ChatGPT, w
     {"role":"assistant","content":"Diagnosis"}]}
 \end{lstlisting}
 The training data is made up of ten to hundreds of examples.\\\\
-We use an open-source project as a foundation for our work. We use it as a reference to measure our accomplishments in this thesis. Because of that, we introduce the project's core functionalities and concepts.
+We use an open-source project as a foundation for our work and as a reference to measure our accomplishments in this thesis. Because of that, we introduce the project's core functionalities and concepts.
 
 \subsubsection*{TracEX}\label{sec:tracex}
 TracEX is an LLM-based data processing pipeline that aims to extract event logs from Patient Journeys. It takes a Patient Journey as an input and delivers an event log as an output. The extraction process involves many steps, some of which will be important later on. Hence, they are listed below:
@@ -47,7 +47,7 @@ TracEX is an LLM-based data processing pipeline that aims to extract event logs 
 \paragraph{Extracting Event Types} Given an activity label, the category of that activity is determined from a predefined list. Possible event types are: Symptom Onset, Symptom Offset, Doctor Visit, Hospital Admission, Hospital Discharge, Treatment, Medication, Lifestyle Change and Feelings.
 \paragraph{Extracting Timestamps} Given an activity label, its start and end date are determined. It is extracted if possible and extrapolated if not. Furthermore, the duration of the activity is calculated from the two timestamps.\\\\
 To achieve the described outcome, a mix of deterministic scripts and requests to the OpenAI API are used. Among other techniques, prompt engineering is used to increase the quality of the extracted event logs.
-The Few-Shot prompting technique has proven to be especially suited for the described tasks. A request to the OpenAI API might contain a message list like displayed in \autoref{lst:few-shot}, where \verb|activity_label| is the appended input that should be used in the extraction, while all previous user and assistant messages are Few-Shot examples.
+The few-shot prompting technique has proven to be especially suited for the described tasks. A request to the OpenAI API might contain a message list like displayed in \autoref{lst:few-shot}, where \verb|activity_label| is the appended input that should be used in the extraction, while all previous user and assistant messages are few-shot examples.
 \begin{lstlisting}[language=prompt, caption={Few-shot prompt to categorize activities into event types}, label={lst:few-shot}]
 system: You are an expert in text categorization and your job is to take a given activity label and to classify it into one of the following event types: Symptom Onset, Symptom Offset, Diagnosis, Doctor Visit, Treatment, Hospital Admission, Hospital Discharge, Medication, Lifestyle Change and Feelings. Please consider the capitalization.  
 user: visiting doctor's 

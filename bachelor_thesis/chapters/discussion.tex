@@ -1,5 +1,5 @@
 \section{Discussion}\label{sec:discussion}
-In this chapter, we will discuss the approaches and the results we achieved in hindsight.\\
+In this chapter, we discuss the approaches and the results we achieved in hindsight.\\
 Both approaches to fine-tuning improved GPT-3.5 Turbo's performance. In some metrics, there are noticeably fewer improvements, and we want to discuss that.\\
 \begin{itemize}[partopsep=0pt, topsep=0pt]
     \item To our surprise, fine-tuning did not improve the model's capabilities in classifying event types for activities. This is the easiest of the four tasks we evaluated, and the base model performed reasonably well, setting the bar higher than in any other task. The reason for the smaller improvement is likely a lack of diversity in the training data. In many Patient Journeys, events of type System Onset are more common than Treatment or Medication because patients can describe what they felt and experienced in more detail, compared to treatment and medication plans. Our training data reflects that.

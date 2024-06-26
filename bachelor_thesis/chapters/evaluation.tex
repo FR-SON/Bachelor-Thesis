@@ -1,5 +1,5 @@
 \section{Evaluation}\label{sec:eval}
-In this chapter, we will evaluate the presented approaches using the trained models from ~\autoref{sec:multi-task-ft} and \autoref{sec:single-task-ft} to extract event logs from Patient Journeys. In order to properly compare the fine-tuned models and the base model, we will first introduce the metrics we use. Second, we will describe the evaluation process. Third, we will present our results for each model, each task and each of the task's metrics individually.\\
+In this chapter, we evaluate the presented approaches using the trained models from ~\autoref{sec:multi-task-ft} and \autoref{sec:single-task-ft} to extract event logs from Patient Journeys. In order to properly compare the fine-tuned models and the base model, we first introduce the metrics we use. Second, we describe the evaluation process. Third, we present our results for each model, each task and each of the task's metrics individually.\\
 We evaluate the extracted event logs by comparing them to ground truths and determining their differences. This is one of a few options already established in the academic context~\cite{latif_fine-tuning_2024}.
 
 \subsection{Metrics}\label{sec:metrics}
@@ -23,12 +23,12 @@ Similar to the event type metric, a timestamp can be either extracted correctly 
 Start and end timestamps can be correct or incorrect, independent of each other. The value we use from this metric is the percentage of \verb|True| and \verb|False| values respectively. This way, the number of errors is relative to the number of activities in each Patient Journey.
 
 \subsection{Evaluation Process}\label{sec:eval_process}
-In this chapter, we will describe the process of evaluating the models trained in \autoref{sec:multi-task-ft} and \autoref{sec:single-task-ft} using the metrics proposed in \autoref{sec:metrics}.\\
+In this chapter, we describe the process of evaluating the models trained in \autoref{sec:multi-task-ft} and \autoref{sec:single-task-ft} using the metrics proposed in \autoref{sec:metrics}.\\
 In order to evaluate the quality of the extraction performed by the various models, we need Patient Journeys to extract event logs from. First, we assemble a collection of Patient Journeys that pose different challenges. They are listed in full length in the appendix at \ref{apx:pjs}. They include well-structured descriptions of consecutive events and explicitly stated timestamps, but also implied activities and events with strong temporal relations that are not easily understood without considering a big context window. In short, the reference Patient Journeys provide diverse challenges, featuring both easy and hard-to-extract information.\\
 We conduct comparative analyses between LLM models. To make these as fair and deterministic as possible, the next step is to create ground truths for every Patient Journey and every task performed on them. They are listed in the appendix at \ref{apx:ground_truths}. We later on use the same Patient Journeys and respective ground truths for all models.\\
 We perform the extraction itself using the TracEX pipeline. To address the dependency of the Event Type Classification step detailed in \autoref{sec:back}, we inject the activities from the ground truth into the pipeline before executing that step. This ensures that no previous step affects the results of the extraction in an uncontrolled way.\\\\
 The extraction uses LLMs, which are non-deterministic by design. Due to that fact, the results vary between executions, even with the same input. To solve this issue, we perform each execution multiple times and use the mean of all values between the executions for the evaluation. All datasets without the mean calculation are archived in the aforementioned repository, together with the Patient Journeys.\\\\
-As mentioned in \autoref{sec:tracex}, TracEX uses few-shot prompts for every task we examine in this thesis. The fine-tuned models will perform all tasks without the additional examples in the few-shot prompts since the training data should suffice to convey what is demanded from the model.\\
+As mentioned in \autoref{sec:tracex}, TracEX uses few-shot prompts for every task we examine in this thesis. The fine-tuned models perform all tasks without the additional examples in the few-shot prompts since the training data should suffice to convey what is demanded from the model.\\
 % Every Journey will be preprocessed~\ref{sec:tracex} before every extraction, regardless of model or task.
 
 \subsubsection{Evaluating Activity Labelling}\label{sec:eval_activity}
@@ -43,11 +43,11 @@ The metric described in \autoref{sec:eventtype_metric} can be evaluated with a s
 Time-related information in real-world Patient Journeys is, in many cases, so rare and vague that it is hard to determine a timestamp perfectly, even for a human. For this reason, we evaluate this metric completely manually, as we do not want to rely on LLMs to do it. The metric described in \autoref{sec:time_metrics} is designed to leave room for interpretation since we believe interpreting the time-related information in a Patient Journey as a human is the best way to derive concrete timestamps correctly and with the certainty needed in an evaluation.
 
 \subsection{Presentation of Results}\label{sec:results}
-In this chapter, we will present and discuss the results we achieved by applying the metrics defined in \autoref{sec:metrics} to the event logs created by the models trained in \autoref{sec:multi-task-ft} and \autoref{sec:single-task-ft}.\\
-We will first showcase the multi-task fine-tuned model and, secondly, the single-task fine-tuned model, comparing each to GPT-3.5 Turbo. We perform the extraction on the Patient Journeys listed in \ref{apx:pjs}.
+In this chapter, we present and discuss the results we achieved by applying the metrics defined in \autoref{sec:metrics} to the event logs created by the models trained in \autoref{sec:multi-task-ft} and \autoref{sec:single-task-ft}.\\
+We first showcase the multi-task fine-tuned model and, secondly, the single-task fine-tuned model, comparing each to GPT-3.5 Turbo. We perform the extraction on the Patient Journeys listed in \ref{apx:pjs}.
 
 \subsubsection{Multi-Task Fine-Tuned Model}\label{sec_eval_multi}
-We will present the results for every task performed by the model in the following order: First, we showcase the performance in labelling activities, followed by classifying event types of activities, and lastly, extracting timestamps for activities.
+We present the results for every task performed by the model in the following order: First, we showcase the performance in labelling activities, followed by classifying event types of activities, and lastly, extracting timestamps for activities.
 
 \begin{figure}[p]
   \centering
